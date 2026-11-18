@@ -1,0 +1,109 @@
+{
+  "author": "Kenney",
+  "license": "CC0-1.0",
+  "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "models": [
+    {
+      "file": "racing/grandStand.glb",
+      "source": "https://kenney.nl/assets/racing-kit",
+      "bytes": 12484,
+      "sha256": "6f5db4f9d9fd82080a561e78d6bc3420e5ed4ed7d8d91ed8bae7f5a7a469645b"
+    },
+    {
+      "file": "racing/grandStandCovered.glb",
+      "source": "https://kenney.nl/assets/racing-kit",
+      "bytes": 15200,
+      "sha256": "48fc8e7eace9969a849805bddd5dce2bf1244129f46ae18f7dc8499fe1792b50"
+    },
+    {
+      "file": "racing/flagGreen.glb",
+      "source": "https://kenney.nl/assets/racing-kit",
+      "bytes": 17176,
+      "sha256": "18846508e1f1744c284b0fb7add034d748aa9d35b3179e22e279cc65c279b834"
+    },
+    {
+      "file": "racing/lightPostLarge.glb",
+      "source": "https://kenney.nl/assets/racing-kit",
+      "bytes": 23536,
+      "sha256": "f41b4599752cf82ad87c8626396a36517d36db41a52ab33084a8b7de7d13f064"
+    },
+    {
+      "file": "racing/pitsOfficeRoof.glb",
+      "source": "https://kenney.nl/assets/racing-kit",
+      "bytes": 11604,
+      "sha256": "144c15e740c8b11eff72f391f2ce543cd02299ffa872d49d0e910f697bb4c1e6"
+    },
+    {
+      "file": "nature/tree_oak.glb",
+      "source": "https://kenney.nl/assets/nature-kit",
+      "bytes": 14644,
+      "sha256": "d7fd8773674928c50c11b66d12c636d49bdcc15a8b1c7fbb98e6f63a3439a3f3"
+    },
+    {
+      "file": "nature/tree_palm.glb",
+      "source": "https://kenney.nl/assets/nature-kit",
+      "bytes": 13616,
+      "sha256": "27bbb23d26ed788d84de6df2f7fab0acc3fe0ff16c7d08cdcfa1fffcb11de324"
+    },
+    {
+      "file": "nature/plant_bush.glb",
+      "source": "https://kenney.nl/assets/nature-kit",
+      "bytes": 4396,
+      "sha256": "ae7b1beb39e242b13f5f29e3ec23ef21034b814f82297b8aa00a9bf4e1b09590"
+    },
+    {
+      "file": "car/sedan.glb",
+      "source": "https://kenney.nl/assets/car-kit",
+      "bytes": 172216,
+      "sha256": "b532ea7d2c59f7f6b22b138cf1955218a2c1898f1cea932af4d3fd563c3959b7"
+    },
+    {
+      "file": "car/hatchback-sports.glb",
+      "source": "https://kenney.nl/assets/car-kit",
+      "bytes": 197804,
+      "sha256": "bd5c9d4c3b4bdd254a66b8426563a68b1487ae7a5076df3a2488e6ffed7be64f"
+    },
+    {
+      "file": "mini/character-male-a.glb",
+      "source": "https://kenney.nl/assets/mini-characters",
+      "bytes": 246916,
+      "sha256": "77572792bfe2773b715b8cd8e18644b52b3e1f155fe10450254b50f9c364382a"
+    },
+    {
+      "file": "mini/character-female-b.glb",
+      "source": "https://kenney.nl/assets/mini-characters",
+      "bytes": 252140,
+      "sha256": "2288438e7baf9acc91a870c82dc00d66710bb486592cfc3474ef8ed93a03863a"
+    },
+    {
+      "file": "mini/character-male-e.glb",
+      "source": "https://kenney.nl/assets/mini-characters",
+      "bytes": 242704,
+      "sha256": "cd76681090ce29861b055b0f8b2bdcf84bfccc4ca816f428df42a9bb76d6e1b6"
+    },
+    {
+      "file": "roads/road-straight.glb",
+      "source": "https://kenney.nl/assets/city-kit-roads",
+      "bytes": 5248,
+      "sha256": "f8f744fb6fc96dedd5ad1f763b550166f2624a3757bf36b4b39969d2e7cacac5"
+    },
+    {
+      "file": "roads/light-curved.glb",
+      "source": "https://kenney.nl/assets/city-kit-roads",
+      "bytes": 9492,
+      "sha256": "154dcce9d58ec2cd165e26c91a89c97bdd2838cf06d255099b3570df84f82ec6"
+    },
+    {
+      "file": "city/building-d.glb",
+      "source": "https://kenney.nl/assets/city-kit-commercial",
+      "bytes": 95160,
+      "sha256": "40605608e9aca0c98e294acff4af0f74afa417a51d589be490ca98f33ce4c2f5"
+    },
+    {
+      "file": "city/detail-awning.glb",
+      "source": "https://kenney.nl/assets/city-kit-commercial",
+      "bytes": 5528,
+      "sha256": "386978daf81dc11ac601638f19a41918a391ff882a8c518ae5a3215a1bed4d8a"
+    }
+  ]
+}

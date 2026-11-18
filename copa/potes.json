@@ -1,0 +1,524 @@
+{
+  "A": [
+    {
+      "c1": "#D7172B",
+      "c2": "#111111",
+      "nome": "Flamengo",
+      "slug": "flamengo",
+      "sigla": "FLA"
+    },
+    {
+      "c1": "#0B6B3A",
+      "c2": "#F2F2F2",
+      "nome": "Palmeiras",
+      "slug": "palmeiras",
+      "sigla": "PAL"
+    },
+    {
+      "c1": "#FFFFFF",
+      "c2": "#D2232A",
+      "nome": "São Paulo",
+      "slug": "sao-paulo",
+      "sigla": "SAO"
+    },
+    {
+      "c1": "#FFFFFF",
+      "c2": "#151515",
+      "nome": "Corinthians",
+      "slug": "corinthians",
+      "sigla": "COR"
+    },
+    {
+      "c1": "#0D80BF",
+      "c2": "#151515",
+      "nome": "Grêmio",
+      "slug": "gremio",
+      "sigla": "GRE"
+    },
+    {
+      "c1": "#151515",
+      "c2": "#FFFFFF",
+      "nome": "Vasco",
+      "slug": "vasco",
+      "sigla": "VAS"
+    },
+    {
+      "c1": "#FFFFFF",
+      "c2": "#151515",
+      "nome": "Santos",
+      "slug": "santos",
+      "sigla": "SAN"
+    },
+    {
+      "c1": "#151515",
+      "c2": "#FFFFFF",
+      "nome": "Atlético-MG",
+      "slug": "atletico-mg",
+      "sigla": "CAM"
+    },
+    {
+      "c1": "#E30613",
+      "c2": "#F2F2F2",
+      "nome": "Internacional",
+      "slug": "internacional",
+      "sigla": "INT"
+    },
+    {
+      "c1": "#1D4FD1",
+      "c2": "#F2F2F2",
+      "nome": "Cruzeiro",
+      "slug": "cruzeiro",
+      "sigla": "CRU"
+    },
+    {
+      "c1": "#151515",
+      "c2": "#FFFFFF",
+      "nome": "Ceará",
+      "slug": "ceara",
+      "sigla": "CEA"
+    },
+    {
+      "c1": "#151515",
+      "c2": "#FFFFFF",
+      "nome": "Botafogo",
+      "slug": "botafogo",
+      "sigla": "BOT"
+    },
+    {
+      "c1": "#D51D2E",
+      "c2": "#111111",
+      "nome": "Íbis",
+      "slug": "ibis",
+      "sigla": "IBI"
+    },
+    {
+      "c1": "#1453A3",
+      "c2": "#E3171F",
+      "nome": "Bahia",
+      "slug": "bahia",
+      "sigla": "BAH"
+    },
+    {
+      "c1": "#E3171F",
+      "c2": "#111111",
+      "nome": "Sport",
+      "slug": "sport",
+      "sigla": "SPT"
+    }
+  ],
+  "B": [
+    {
+      "c1": "#E3171F",
+      "c2": "#F2F2F2",
+      "nome": "Vila Nova",
+      "slug": "vila-nova",
+      "sigla": "VNO"
+    },
+    {
+      "c1": "#C8102E",
+      "c2": "#111111",
+      "nome": "Athletico-PR",
+      "slug": "athletico-pr",
+      "sigla": "CAP"
+    },
+    {
+      "c1": "#174499",
+      "c2": "#FFFFFF",
+      "nome": "Feira FC",
+      "slug": "feira-fc",
+      "sigla": "FEI"
+    },
+    {
+      "c1": "#8B1329",
+      "c2": "#C8A456",
+      "nome": "Flamengo de Guarulhos",
+      "slug": "flamengo-guarulhos",
+      "sigla": "FLG"
+    },
+    {
+      "c1": "#8A1C3A",
+      "c2": "#1F7A4C",
+      "nome": "Fluminense",
+      "slug": "fluminense",
+      "sigla": "FLU"
+    },
+    {
+      "c1": "#F2F2F2",
+      "c2": "#E3171F",
+      "nome": "Santa Cruz",
+      "slug": "santa-cruz",
+      "sigla": "STC"
+    },
+    {
+      "c1": "#E3171F",
+      "c2": "#111111",
+      "nome": "Vitória",
+      "slug": "vitoria",
+      "sigla": "VIT"
+    },
+    {
+      "c1": "#1453A3",
+      "c2": "#E3171F",
+      "nome": "Fortaleza",
+      "slug": "fortaleza",
+      "sigla": "FOR"
+    },
+    {
+      "c1": "#0A8F4A",
+      "c2": "#F2F2F2",
+      "nome": "Guarani",
+      "slug": "guarani",
+      "sigla": "GUA"
+    },
+    {
+      "c1": "#1453A3",
+      "c2": "#F2F2F2",
+      "nome": "Avaí",
+      "slug": "avai",
+      "sigla": "AVA"
+    },
+    {
+      "c1": "#0A6E3C",
+      "c2": "#F2F2F2",
+      "nome": "Coritiba",
+      "slug": "coritiba",
+      "sigla": "CFC"
+    },
+    {
+      "c1": "#E3171F",
+      "c2": "#F2F2F2",
+      "nome": "CRB",
+      "slug": "crb",
+      "sigla": "CRB"
+    },
+    {
+      "c1": "#E3171F",
+      "c2": "#F2F2F2",
+      "nome": "Náutico",
+      "slug": "nautico",
+      "sigla": "NAU"
+    },
+    {
+      "c1": "#101010",
+      "c2": "#FFFFFF",
+      "nome": "Andirá",
+      "slug": "andira",
+      "sigla": "AND"
+    },
+    {
+      "c1": "#F6C400",
+      "c2": "#111111",
+      "nome": "Criciúma",
+      "slug": "criciuma",
+      "sigla": "CRI"
+    }
+  ],
+  "C": [
+    {
+      "c1": "#0A8F4A",
+      "c2": "#F2F2F2",
+      "nome": "Goiás",
+      "slug": "goias",
+      "sigla": "GOI"
+    },
+    {
+      "c1": "#D5202A",
+      "c2": "#173675",
+      "nome": "Marcílio Dias",
+      "slug": "marcilio-dias",
+      "sigla": "MDI"
+    },
+    {
+      "c1": "#F6C400",
+      "c2": "#0A8F4A",
+      "nome": "Mirassol",
+      "slug": "mirassol",
+      "sigla": "MIR"
+    },
+    {
+      "c1": "#151515",
+      "c2": "#FFFFFF",
+      "nome": "XV de Piracicaba",
+      "slug": "xv-de-piracicaba",
+      "sigla": "XVP"
+    },
+    {
+      "c1": "#0A8F4A",
+      "c2": "#F2F2F2",
+      "nome": "Chapecoense",
+      "slug": "chapecoense",
+      "sigla": "CHA"
+    },
+    {
+      "c1": "#237340",
+      "c2": "#FFFFFF",
+      "nome": "Luverdense",
+      "slug": "luverdense",
+      "sigla": "LUV"
+    },
+    {
+      "c1": "#E51719",
+      "c2": "#FFFFFF",
+      "nome": "America-RJ",
+      "slug": "america-rj",
+      "sigla": "AMR"
+    },
+    {
+      "c1": "#101010",
+      "c2": "#FFFFFF",
+      "nome": "ASA",
+      "slug": "asa",
+      "sigla": "ASA"
+    },
+    {
+      "c1": "#CF142B",
+      "c2": "#111111",
+      "nome": "Campinense",
+      "slug": "campinense",
+      "sigla": "CPN"
+    },
+    {
+      "c1": "#D32228",
+      "c2": "#171717",
+      "nome": "Inter de Bebedouro",
+      "slug": "inter-bebedouro",
+      "sigla": "INB"
+    },
+    {
+      "c1": "#00843D",
+      "c2": "#FFFFFF",
+      "nome": "Itacoatiara",
+      "slug": "itacoatiara",
+      "sigla": "ITA"
+    },
+    {
+      "c1": "#D62128",
+      "c2": "#FFD032",
+      "nome": "Juazeirense",
+      "slug": "juazeirense",
+      "sigla": "JUA"
+    },
+    {
+      "c1": "#651333",
+      "c2": "#FFFFFF",
+      "nome": "Juventus da Mooca",
+      "slug": "juventus-mooca",
+      "sigla": "JMO"
+    },
+    {
+      "c1": "#75BCE9",
+      "c2": "#FFFFFF",
+      "nome": "Londrina",
+      "slug": "londrina",
+      "sigla": "LON"
+    },
+    {
+      "c1": "#1357B5",
+      "c2": "#FFFFFF",
+      "nome": "Nacional-AM",
+      "slug": "nacional-am",
+      "sigla": "NAC"
+    }
+  ],
+  "D": [
+    {
+      "c1": "#75C6F3",
+      "c2": "#FFFFFF",
+      "nome": "Paysandu",
+      "slug": "paysandu",
+      "sigla": "PAY"
+    },
+    {
+      "c1": "#00843C",
+      "c2": "#E22A28",
+      "nome": "Petrolina",
+      "slug": "petrolina",
+      "sigla": "PET"
+    },
+    {
+      "c1": "#1C6B32",
+      "c2": "#B8201E",
+      "nome": "Portuguesa Santista",
+      "slug": "portuguesa-santista",
+      "sigla": "PST"
+    },
+    {
+      "c1": "#ba201f",
+      "c2": "#e9ac39",
+      "nome": "Real Brasília Futebol Clube",
+      "slug": "real-brasilia",
+      "sigla": "9823"
+    },
+    {
+      "c1": "#0D2A6E",
+      "c2": "#F2F2F2",
+      "nome": "Remo",
+      "slug": "remo",
+      "sigla": "REM"
+    },
+    {
+      "c1": "#49B7DC",
+      "c2": "#F3C341",
+      "nome": "Rolim de Moura",
+      "slug": "rolim-de-moura",
+      "sigla": "ROL"
+    },
+    {
+      "c1": "#168346",
+      "c2": "#F3CE2A",
+      "nome": "Sampaio Corrêa",
+      "slug": "sampaio-correa",
+      "sigla": "SAM"
+    },
+    {
+      "c1": "#1856A5",
+      "c2": "#FFFFFF",
+      "nome": "Santo André",
+      "slug": "santo-andre",
+      "sigla": "SAD"
+    },
+    {
+      "c1": "#F5C400",
+      "c2": "#111111",
+      "nome": "São Bernardo",
+      "slug": "sao-bernardo",
+      "sigla": "SBE"
+    },
+    {
+      "c1": "#19A568",
+      "c2": "#FFFFFF",
+      "nome": "Uberlândia",
+      "slug": "uberlandia",
+      "sigla": "UBE"
+    },
+    {
+      "c1": "#171717",
+      "c2": "#FFFFFF",
+      "nome": "União Corinthians",
+      "slug": "uniao-corinthians",
+      "sigla": "UNC"
+    },
+    {
+      "c1": "#1A1A1A",
+      "c2": "#F2F2F2",
+      "nome": "ABC",
+      "slug": "abc",
+      "sigla": "ABC"
+    },
+    {
+      "c1": "#F6C400",
+      "c2": "#111111",
+      "nome": "Amazonas",
+      "slug": "amazonas",
+      "sigla": "AMZ"
+    },
+    {
+      "c1": "#0A8F4A",
+      "c2": "#111111",
+      "nome": "América-MG",
+      "slug": "america-mg",
+      "sigla": "AME"
+    },
+    {
+      "c1": "#E30613",
+      "c2": "#FFFFFF",
+      "nome": "América-RN",
+      "slug": "america-rn",
+      "sigla": "ARN"
+    }
+  ],
+  "atualizado": "2026-11-07",
+  "escolhiveis": [
+    {
+      "c1": "#003B7A",
+      "c2": "#F7B600",
+      "nome": "Boca Juniors",
+      "slug": "boca-juniors",
+      "sigla": "BOC"
+    },
+    {
+      "c1": "#F4D431",
+      "c2": "#153B8E",
+      "nome": "Al Nassr",
+      "slug": "al-nassr",
+      "sigla": "NAS"
+    },
+    {
+      "c1": "#168246",
+      "c2": "#FFFFFF",
+      "nome": "Oriente Petrolero",
+      "slug": "oriente-petrolero",
+      "sigla": "ORP"
+    },
+    {
+      "c1": "#CB3524",
+      "c2": "#F2F2F2",
+      "nome": "Atlético de Madrid",
+      "slug": "atletico-madrid",
+      "sigla": "ATM"
+    },
+    {
+      "c1": "#69ADDB",
+      "c2": "#172C50",
+      "nome": "Montevideo City Torque",
+      "slug": "montevideo-city-torque",
+      "sigla": "MCT"
+    },
+    {
+      "c1": "#142F65",
+      "c2": "#FFFFFF",
+      "nome": "Cerro Largo",
+      "slug": "cerro-largo",
+      "sigla": "CLA"
+    },
+    {
+      "c1": "#FFFFFF",
+      "c2": "#222139",
+      "nome": "Real Madrid",
+      "slug": "real-madrid",
+      "sigla": "RMA"
+    },
+    {
+      "c1": "#FFFFFF",
+      "c2": "#151515",
+      "nome": "Vitória de Guimarães",
+      "slug": "vitoria-guimaraes",
+      "sigla": "VGU"
+    },
+    {
+      "c1": "#FFE667",
+      "c2": "#005187",
+      "nome": "Villarreal",
+      "slug": "villarreal",
+      "sigla": "VIL"
+    },
+    {
+      "c1": "#1750C4",
+      "c2": "#FFFFFF",
+      "nome": "Al Hilal",
+      "slug": "al-hilal",
+      "sigla": "HIL"
+    },
+    {
+      "c1": "#EE2523",
+      "c2": "#FFFFFF",
+      "nome": "Athletic Bilbao",
+      "slug": "athletic-bilbao",
+      "sigla": "BIL"
+    },
+    {
+      "c1": "#FFFFFF",
+      "c2": "#DA001A",
+      "nome": "Lyon",
+      "slug": "lyon",
+      "sigla": "OLY"
+    },
+    {
+      "c1": "#0A8F4A",
+      "c2": "#F2F2F2",
+      "nome": "Sporting",
+      "slug": "sporting",
+      "sigla": "SCP"
+    }
+  ]
+}

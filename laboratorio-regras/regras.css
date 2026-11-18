@@ -1,0 +1,47 @@
+#view-regras{--rules-ink:#153f31;--rules-muted:#526655;--rules-line:#d8dfcc;color:var(--rules-ink);font-size:17px}
+#view-regras .page{background:#f5f6ed;padding:28px 18px 60px;min-height:100dvh}
+#view-regras .wrap{max-width:1040px;width:100%;min-width:0;margin:0 auto;box-sizing:border-box}
+#view-regras *,#view-regras *::before,#view-regras *::after{box-sizing:border-box}
+#view-regras .rules-hero{margin:0 0 42px}#view-regras .eyebrow{font:800 12px/1.5 Arial,sans-serif;letter-spacing:1.8px;color:#467155;margin:0 0 12px}
+#view-regras h1{font:800 clamp(34px,5vw,56px)/1.05 'Saira Condensed',Impact,sans-serif;letter-spacing:-.6px;margin:0 0 16px}
+#view-regras .rules-intro{font-size:18px;margin:0 0 24px;color:var(--rules-muted)}
+#view-regras .rules-quick{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#view-regras .rules-quick-card{position:relative;display:flex;align-items:center;gap:16px;min-width:0;padding:22px 32px 22px 20px;border-radius:18px;border:1px solid #d5dfc8;background:#fffdf5;box-shadow:0 3px 0 #e6ebdc}
+#view-regras .rules-quick-card:first-child{background:#165b3d;border-color:#165b3d;color:white;grid-column:1/-1}
+#view-regras .rules-quick-card p{font:650 18px/1.45 Arial,sans-serif;margin:0;color:inherit;max-width:44ch;overflow-wrap:anywhere}
+#view-regras .quick-icon{flex:none;width:48px;height:48px;display:grid;place-items:center;font-size:31px;border-radius:14px;background:#edf2e2}
+#view-regras .rules-quick-card:first-child .quick-icon{background:#ffffff1a}
+#view-regras .quick-step{position:absolute;right:12px;top:10px;font:700 10px Arial;opacity:.45}
+#view-regras .rules-full>h2{font-size:32px;margin:0 0 8px}#view-regras .rules-full>p:not(.eyebrow){font-size:17px;color:var(--rules-muted);margin:0 0 22px}
+#view-regras .rules-accordion{background:#fffef8;border:1px solid var(--rules-line);border-radius:16px;margin:0 0 12px;overflow:hidden}
+#view-regras .rules-accordion>summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;cursor:pointer;padding:22px;font:800 22px/1.2 'Saira Condensed',Arial,sans-serif}
+#view-regras .rules-accordion>summary::-webkit-details-marker{display:none}
+#view-regras .accordion-plus{font:400 26px Arial;color:#397953;flex:none}#view-regras .rules-accordion[open] .accordion-plus{transform:rotate(45deg)}
+#view-regras .rules-content{padding:0 24px 22px;border-top:1px solid #e9ecdf}
+#view-regras .rules-content>.card{background:transparent;box-shadow:none;border:0;padding:24px 0;margin:0;border-radius:0}
+#view-regras .rules-content>.card+.card{border-top:1px solid #e7ebdc}
+#view-regras .rules-content p,#view-regras .rules-content li,#view-regras .rules-content .note,#view-regras .rules-content .lede,#view-regras .rules-content .who small,#view-regras .rules-content .pts-table span{font-size:17px!important;line-height:1.65!important;color:#344c3c}
+#view-regras .rules-content p{max-width:70ch;margin:12px 0 20px}#view-regras .rules-content h3{font-size:27px;line-height:1.15;margin-bottom:18px}#view-regras .rules-content h4{font-size:23px;line-height:1.25}
+#view-regras .rules-content .stack{padding-top:22px}#view-regras .rules-content .stack h2{font-size:30px}
+#view-regras .rules-content .grid2,#view-regras .season-steps,#view-regras .season-legacy{display:grid;grid-template-columns:1fr;gap:20px}
+#view-regras .pts-table>div{padding:16px 0;gap:18px;align-items:start}#view-regras .pts-table b{font-size:24px;line-height:1.5;min-width:40px}
+#view-regras .role{padding:18px 0;gap:14px}#view-regras .who{font-size:20px}#view-regras .who small{margin-top:8px}
+#view-regras .rule-details>summary{font-size:18px!important;line-height:1.4;padding:16px 0}#view-regras .rule-details ul{padding-left:22px}#view-regras .rule-details li{margin-bottom:18px}
+#view-regras .evolution-tools{display:flex;flex-wrap:wrap;gap:12px;align-items:end}#view-regras .evolution-tools label{font-size:17px;flex:1;min-width:0}#view-regras .field{font-size:17px;width:100%;max-width:100%;min-width:0;padding:12px}#view-regras button.btn{font-size:17px;white-space:normal;min-height:48px}
+#view-regras .evolution-tabs{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;overflow:visible!important;margin:22px 0}
+#view-regras .evolution-tabs button{min-width:0!important;max-width:100%;width:auto!important;flex:initial;padding:0 0 14px!important;border-radius:14px;overflow:hidden;font-size:18px;line-height:1.3}
+#view-regras .evolution-tabs .stage-thumb{height:auto!important;aspect-ratio:1.6;width:100%;margin:0 0 10px!important;background:linear-gradient(145deg,#ecf3df,#d7e7cf);border-radius:0}
+#view-regras .evolution-tabs button>span{display:block;font-size:12px;color:#53714f}#view-regras .evolution-tabs button>small{display:block;font-size:17px;margin-top:5px}
+#view-regras .neighborhood-photo,#view-regras .ladder-neighborhood{background:linear-gradient(145deg,#ecf3df,#d7e7cf);padding:0!important}
+#view-regras .stage-thumb img,#view-regras .ladder-neighborhood img,#view-regras .neighborhood-photo img{display:block;width:100%!important;height:100%!important;object-fit:contain!important;filter:none!important;transform:none!important;border-radius:0}
+#view-regras .evolution-scene.neighborhood-evolution{display:flex;flex-direction:column;gap:0;overflow:hidden;background:#fffef8;border:1px solid #d8dfcc;border-radius:16px}
+#view-regras #evolution-neighborhood{width:100%;height:auto!important;aspect-ratio:1.6;border-radius:0;min-height:0!important}
+#view-regras .stadium-caption{padding:22px!important}#view-regras .stadium-caption h3{font-size:32px}#view-regras .stadium-caption p{margin-bottom:12px}
+#view-regras .ladder{display:grid!important;grid-template-columns:1fr 1fr;gap:16px}#view-regras .ladder>div{min-width:0;display:flex;flex-direction:column;text-align:left;overflow:hidden;padding:0 0 16px!important;border:1px solid var(--rules-line);border-radius:14px}
+#view-regras .ladder-neighborhood{width:100%!important;height:auto!important;aspect-ratio:1.6;margin:0 0 12px!important}#view-regras .ladder strong{font-size:21px;padding:0 14px}#view-regras .ladder span{font-size:17px;padding:6px 14px}
+#view-regras a:focus-visible,#view-regras button:focus-visible,#view-regras summary:focus-visible{outline:3px solid #c09127;outline-offset:3px}
+@media(max-width:600px){#view-regras .page{padding:20px 12px 42px}#view-regras h1{font-size:35px}#view-regras .rules-hero{margin-bottom:32px}#view-regras .rules-intro{margin-bottom:18px}#view-regras .rules-quick{grid-template-columns:1fr;gap:10px}#view-regras .rules-quick-card{padding:16px 24px 16px 14px;gap:12px;min-height:87px;border-radius:14px}#view-regras .rules-quick-card p{font-size:17px;line-height:1.4}#view-regras .quick-icon{width:41px;height:45px;font-size:28px}#view-regras .rules-accordion>summary{padding:20px 16px;font-size:23px}#view-regras .rules-content{padding:0 15px 18px}#view-regras .rules-content>.card{padding-top:22px}#view-regras .evolution-tabs{grid-template-columns:1fr 1fr;gap:10px}#view-regras .evolution-tabs button:last-child{grid-column:1/-1}#view-regras .evolution-tabs button:last-child .stage-thumb{aspect-ratio:1.9}#view-regras .ladder{grid-template-columns:1fr}#view-regras .ladder-neighborhood{aspect-ratio:1.7}#view-regras .evolution-tools{display:grid;grid-template-columns:1fr}#view-regras .stadium-caption{padding:18px!important}#view-regras .season-heading{flex-wrap:wrap}#view-regras .rule-podium{gap:8px;flex-wrap:wrap}#view-regras .rule-podium span{font-size:17px;min-width:0}#view-regras .site-footer{font-size:17px}}
+
+#view-regras .evolution-scene.neighborhood-evolution{padding:0!important}#view-regras .rules-content .eyebrow{font-size:12px!important;line-height:1.5!important}
+
+#view-regras .evolution-tabs button>.stage-name,#view-regras .evolution-tabs button>.stage-number,#view-regras .evolution-tabs button>small{padding-left:16px!important;padding-right:16px!important;text-align:left}#view-regras .evolution-tabs button>.stage-name{font-size:18px;color:inherit;line-height:1.35;margin-top:4px}#view-regras .evolution-tabs button[aria-pressed=true]>.stage-number{color:#fffdf1!important}#view-regras #preview-dna,#view-regras .rules-content>.card[hidden]{display:none!important}

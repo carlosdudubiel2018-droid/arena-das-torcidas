@@ -1,0 +1,15 @@
+/* The search remains available in the game. The mobile outer brand is hidden
+   instead, leaving the existing map header and the new bottom navigation. */
+@media(min-width:761px){
+ :root{--nav-height:48px!important}
+ .topbar{height:48px!important;padding:7px 20px!important}
+ .topbar .brand,.topbar .mainnav,.topbar .hamburger{display:none!important}
+ .topbar .search{margin-left:auto}
+}
+@media(max-width:760px){
+ .topbar .mainnav,.topbar .hamburger{display:none!important}
+ .topbar{gap:10px!important;padding-inline:12px!important}
+ .district>header{display:none!important}
+ .district>iframe{height:100%!important}
+ .district-loading{top:0!important}
+}

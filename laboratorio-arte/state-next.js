@@ -1,0 +1,17 @@
+/* Laboratory only: visual stages and fictional participants, no game writes. */
+(()=>{const B=window.ARENA_ART_STATE;
+ const milestones=[[0,10,20],[25,50,75,100,125,150,175],[200,300,450,600,800],[1000,1600,2400,3200,4200],[5000,6000,7500,10000]];
+ const works=[['Campo de várzea','Cerca e bancos','Entrada da torcida'],['Arquibancada principal coberta','Segundo lado de arquibancada','Entrada e bilheteria','Terceiro lado e iluminação','Calçadas e comércio','Quarto lado de arquibancada','Preparação da inauguração'],['Inauguração do Estádio','Acesso ampliado','Praça e paradas de ônibus','Fachada e circulação','Entorno pronto para Arena'],['Inauguração da Arena','Fachada ampliada','Acesso e estacionamento','Passeio da torcida','Cobertura e entorno ampliados'],['Inauguração da Mega Arena','Praça monumental','Estacionamento ampliado','Bairro completo']];
+ const catalog=[{id:'banner',name:'Bandeirão',min:0},{id:'smoke',name:'Show da torcida',min:0},{id:'screen',name:'Telão',min:0},{id:'president-box',name:'Camarote do presidente',min:0},{id:'club-shop',name:'Loja do clube',min:0},{id:'training-ground',name:'Centro de treinamento',min:0},{id:'trophy-room',name:'Sala de troféus',min:3},{id:'statue',name:'Estátua do mascote',min:3}];
+ function plan(t){const p=B.plan(t),list=milestones[p.level],phase=Math.max(0,list.filter(n=>p.chairs>=n).length-1),sides=p.level===0?[]:p.level===1?['main',...(phase>=1?['left']:[]),...(phase>=3?['right']:[]),...(phase>=5?['back']:[])]:['main','left','right','back'];
+  return {...p,phase,sides,standLength:[0,68,82,94,106][p.level]+phase*1.5,standDepth:p.level===1?11+phase*.35:13+phase*.3,width:[166,176,212,254,312][p.level]+phase*4,depth:[146,154,188,224,280][p.level]+phase*3,trees:[4,7,22,36,52][p.level]+phase*2,cars:[1,3,18,32,50][p.level]+phase*2,lamps:[2,3,10,18,28][p.level]+phase,houses:Math.min(20,[0,2,10,14,18][p.level]+phase),work:works[p.level][phase],nextWork:works[p.level][phase+1]||B.names[p.level+1]||'Bairro completo',nextAt:list[phase+1]||B.starts[p.level+1]||null};
+ }
+ function people(t,lite=false){const p=plan(t),leaders=new Set((t.lideres||[]).map(f=>f.h)),seen=new Set(),fans=(t.fans||[]).filter(f=>{if(seen.has(f.h))return false;seen.add(f.h);return true;}).map(f=>({...f,founder:f.founderOrder===1,president:t.presidente?.h===f.h,leader:leaders.has(f.h),own:t.visitorHandle===f.h}));
+  fans.sort((a,b)=>Number(b.own)-Number(a.own)||Number(b.president)-Number(a.president)||Number(b.leader)-Number(a.leader)||Number(b.founder)-Number(a.founder)||(a.founderOrder||0)-(b.founderOrder||0));
+  return fans.slice(0,lite?6:30).map((f,i)=>({...f,x:-18+(i%7)*6,z:p.plazaZ-6+Math.floor(i/7)*3.7,role:f.president?'Presidente':f.leader?'Líder':f.founder?'Torcedor nº 1':f.own?'Você':'Torcedor',label:!f.hide_handle&&!f.hideHandle&&(f.president||f.leader||f.own||f.founder)}));
+ }
+ const allowed=(id,level)=>catalog.some(i=>i.id===id&&!i.soon&&level>=i.min);
+ window.ARENA_ART_STATE={...B,plan,people,catalog,milestones,works,allowed,equipment:catalog.filter(i=>!i.soon).map(i=>i.id)};
+ const M=window.ARENA_MOTION;
+ window.ARENA_MOTION={...M,budget:(lite,n)=>lite?0:Math.min(30,n),pose:o=>{const p=M.pose(o);if(o.lite)return {...p,action:'idle'};if(p.action==='walk'||o.arrivalAge!==null&&o.arrivalAge!==undefined||o.labeled)return p;const cycle=(o.time+o.index*2)%24;if(cycle<4&&o.index%4===0)return {...p,action:'emote-yes'};if(cycle<5&&o.index%4===2)return {...p,action:'jump'};if(o.index%6===3)return {...p,action:'holding-right'};return p;}};
+})();

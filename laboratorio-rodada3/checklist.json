@@ -1,0 +1,41 @@
+{
+  "round": 3,
+  "official_files_changed": [],
+  "checks": [
+    "Baú uma vez por @/dia; sequência10/15/20/30/40/50/100; duplicação e perda de sequência verificadas em transação revertida.",
+    "Sétimo dia libera bandeira dourada. A prévia visual não grava nada.",
+    "Partida completa no servidor: +5moedas uma única vez; XP10 por partida +5por gol; +5XP por baú.",
+    "Loja: saldo não fica negativo, compra idempotente, acessório equipado, cadeira1000moedas limitada a1por semana; apenas tabela privada de teste.",
+    "Boné e bandeirão comprados pela interface; visual conferido na praça.",
+    "Nível separado das cadeiras exibido na carteirinha e no ranking. Carteirinha oficial consultada somente em leitura.",
+    "Campeões de ontem + histórico7dias; fechamento5/3/1 simulado e desempate testados.",
+    "Energia por @: duas chaves/sessões independentes viram5/6 após a mesma partida.",
+    "Proteção por IP, aparelho e @; cache10s no cliente,8s no servidor;20consultas simultâneas de ranking fizeram1leitura pesada no teste.",
+    "9testes automatizados da API/motor passaram; console sem novos erros na recarga final e fluxo mapa→Jogar.",
+    "11escudos oficiais128px (66.924bytes):9novos +Íbis e InterdeBebedouro; fontes registradas no laboratório.",
+    "SHA256 de todos os arquivos anteriores do site conferido: nenhuma alteração. Funções e prêmios oficiais não foram modificados."
+  ],
+  "performance": {
+    "baseline": {
+      "ms": 583,
+      "files": 45,
+      "bytes": 611967
+    },
+    "round3": {
+      "ms": 405,
+      "files": 52,
+      "bytes": 629232
+    }
+  },
+  "environment": "Chromium375×812, servidor local. Não é medição em celular real/4G.",
+  "pending": [
+    "Teste em aparelho real Android/iPhone e4G pelo usuário.",
+    "Balanceamento de preços e XP proposto: ajustes só no laboratório antes de futura aprovação."
+  ],
+  "usage_snapshot": {
+    "database": "12%de0,5GB no painel; valor atualizado até1hde atraso",
+    "egress": "5%de5GB",
+    "functions": "2%de500.000"
+  },
+  "qa_account": "@atropagamer recebeu4000moedas de teste, uma única vez, para validar compras; nenhum crédito oficial."
+}

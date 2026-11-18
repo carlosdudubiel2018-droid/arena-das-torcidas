@@ -1,0 +1,45 @@
+.socio-header .app-actions{display:flex;align-items:center;gap:6px;margin-left:auto}
+#arena-install,.app-more>summary{background:#f6c643;color:#172441;border:0;border-radius:12px;padding:8px 12px;min-height:38px;font:inherit;font-size:13px;font-weight:900;cursor:pointer}
+#arena-install[hidden]{display:none!important}
+.app-more{display:none;position:relative}
+.app-more>summary{display:grid;place-items:center;list-style:none;background:#e8edf5}
+.app-more>div{position:absolute;z-index:110;right:0;top:calc(100% + 6px);min-width:115px;background:white;border-radius:12px;box-shadow:0 4px 18px #0e1c3944;padding:5px}
+.app-more button{display:block;width:100%;padding:9px;background:white;border:0;border-radius:8px;color:#152747;text-align:left;font-weight:800}
+#arena-install-help{border:0;border-radius:18px;max-width:min(410px,calc(100% - 24px));background:#fff;color:#162747;padding:20px}
+#arena-install-help::backdrop{background:#101c36aa}
+#arena-install-help li{margin:8px 0}
+#arena-install-help button{padding:8px 15px;border:0;border-radius:9px;background:#f6c643;color:#162747;font-weight:800}
+.bottom-nav.app-nav a{display:flex;flex:1;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:#172441;background:#f6c643;border-radius:13px;text-decoration:none;font-size:11px;font-weight:900;min-width:0}
+.bottom-nav.app-nav a>span{font-size:23px;line-height:1.1}
+@media(max-width:760px),(orientation:landscape) and (max-height:520px){
+ .app-more{display:block}
+ .socio-header .desktop-nav{display:none}
+ body:not(.in-game) .bottom-nav.app-nav{display:flex}
+ .socio-header .app-actions{padding-right:env(safe-area-inset-right,0px)}
+}
+@media(orientation:landscape) and (max-height:520px){
+ .bottom-nav.app-nav{height:calc(58px + env(safe-area-inset-bottom,0px));padding-top:3px;padding-bottom:calc(4px + env(safe-area-inset-bottom,0px))}
+ .bottom-nav.app-nav button{min-height:42px}
+ .bottom-nav.app-nav button>span,.bottom-nav.app-nav a>span{font-size:19px}
+}
+
+.bottom-nav.app-nav .app-copa{flex:0 0 70px;width:70px;min-height:70px;margin-top:-23px;border:4px solid white;border-radius:50%;box-shadow:0 5px 14px #0e1c3940;gap:0;overflow:visible;line-height:1.1}
+.bottom-nav.app-nav .app-copa>span{font-size:31px;line-height:1.13}
+.app-install-invite[hidden]{display:none!important}
+.app-install-invite{position:fixed;z-index:99;left:50%;bottom:calc(98px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(440px,calc(100% - 24px));box-sizing:border-box;background:#12254b;color:#fff;border:1px solid #f6c643;border-radius:14px;padding:12px;box-shadow:0 5px 18px #0004}
+.app-install-invite p{margin:0 0 8px;font-size:15px;font-weight:800}
+.app-install-invite>div{display:flex;gap:8px}
+.app-install-invite button{border:0;border-radius:8px;padding:8px 12px;font-weight:800;background:#f6c643;color:#172441}
+.app-install-invite [data-install-dismiss]{background:#e8edf5}
+.app-copa-page .app-install-invite{position:static;transform:none;width:100%;margin-bottom:10px}
+.app-copa-install{position:fixed;right:calc(8px + env(safe-area-inset-right,0px));top:calc(8px + env(safe-area-inset-top,0px));z-index:8}
+.app-copa-page:has(#scr-menu[hidden]) .app-copa-install{display:none}
+@media(orientation:landscape) and (max-height:520px){
+ .bottom-nav.app-nav .app-copa{flex-basis:58px;width:58px;min-height:58px;margin-top:-14px;border-width:3px}
+ .bottom-nav.app-nav .app-copa>span{font-size:26px}
+ .app-install-invite{bottom:calc(67px + env(safe-area-inset-bottom,0px));padding:8px 12px}
+}
+@media(max-width:760px),(orientation:landscape) and (max-height:520px){
+ .bottom-nav.app-nav{position:fixed;inset:auto 0 0;z-index:90;box-sizing:border-box;align-items:center;gap:4px;background:#fff;border-radius:18px 18px 0 0;padding-inline:max(6px,env(safe-area-inset-left,0px)) max(6px,env(safe-area-inset-right,0px))}
+ .bottom-nav.app-nav>button{display:flex;flex:1 1 0;min-width:0;align-items:center;justify-content:center;flex-direction:column;gap:3px;background:transparent;border:0;color:#172441;font:inherit;font-size:11px;font-weight:800}
+}

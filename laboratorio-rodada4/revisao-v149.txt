@@ -1,0 +1,67 @@
+PROPOSTAS DE NAVEGAÇÃO — NÃO APLICADAS
+
+1. No topo de Jogar: um bloco compacto com @, time, energia, Nv./XP e moedas; tocar abre Meu jogador.
+2. Dois cards principais: Pênaltis e Desafio de Falta, cada um com Jogar valendo / Treinar.
+3. Logo abaixo do resultado: posição no ranking daquele jogo e botão Ver ranking, sem procurar na página.
+4. Baú disponível com um selo no botão Ganhe moedas; depois do resgate, informar quando abre.
+5. Manter Mapa / Ranking / Sócio / Jogar / Regras na barra inferior. Dentro de Jogar, distinguir Ranking dos jogos de Ranking das torcidas.
+6. Loja, Campeões e Passear como atalhos secundários, sem competir com o botão Jogar.
+
+CURVA DE XP APROVADA PARA O LABORATÓRIO
+XP já ganho preservado; só o nível é recalculado. Nível | XP acumulado | XP para o próximo
+ 1 |       0 |    100
+ 2 |     100 |    135
+ 3 |     235 |    190
+ 4 |     425 |    265
+ 5 |     690 |    360
+ 6 |    1050 |    475
+ 7 |    1525 |    610
+ 8 |    2135 |    765
+ 9 |    2900 |    940
+10 |    3840 |   1135
+11 |    4975 |   1350
+12 |    6325 |   1585
+13 |    7910 |   1840
+14 |    9750 |   2115
+15 |   11865 |   2410
+16 |   14275 |   2725
+17 |   17000 |   3060
+18 |   20060 |   3415
+19 |   23475 |   3790
+20 |   27265 |   4185
+21 |   31450 |   4600
+22 |   36050 |   5035
+23 |   41085 |   5490
+24 |   46575 |   5965
+25 |   52540 |   6460
+26 |   59000 |   6975
+27 |   65975 |   7510
+28 |   73485 |   8065
+29 |   81550 |   8640
+30 |   90190 |   9235
+31 |   99425 |   9850
+32 |  109275 |  10485
+33 |  119760 |  11140
+34 |  130900 |  11815
+35 |  142715 |  12510
+36 |  155225 |  13225
+37 |  168450 |  13960
+38 |  182410 |  14715
+39 |  197125 |  15490
+40 |  212615 |  16285
+41 |  228900 |  17100
+42 |  246000 |  17935
+43 |  263935 |  18790
+44 |  282725 |  19665
+45 |  302390 |  20560
+46 |  322950 |  21475
+47 |  344425 |  22410
+48 |  366835 |  23365
+49 |  390200 |  24340
+50 |  414540 |  25335
+
+EXPIRAÇÃO
+5 minutos de inatividade desde a última ação aceita, limitada à virada do dia em Brasília. Gols salvos rendem pontos, moedas e XP por gol; o bônus de conclusão de +10 XP é proporcional às cobranças feitas (5 nos pênaltis; 30 na corrida de falta). Sem cobrança registrada, devolve uma energia, uma vez só.
+
+DIAGNÓSTICO
+Foram encontrados 3 HTTP 400 no intervalo recente (14:58:07, 15:00:40 e 15:02:01 de 03/11, horários exibidos pelo painel). A função antiga não registrava o motivo interno. Não atribuir esses três casos a uma causa não comprovada. A versão nova registra código/ação/tipo sem @ ou chave; rejeição reproduzível de toque cedo foi eliminada.

@@ -1,0 +1,38 @@
+{
+  "unchangedExistingFiles": 534,
+  "initialHtmlGzipBefore": 103596,
+  "initialHtmlGzipAfter": 103725,
+  "foreignInitialSpritesBytes": 18486,
+  "activeForeignClubs": [
+    [
+      "manchester-city",
+      1
+    ],
+    [
+      "sporting",
+      1
+    ],
+    [
+      "vitoria-guimaraes",
+      2
+    ],
+    [
+      "boca-juniors",
+      5
+    ],
+    [
+      "estudiantes",
+      1
+    ],
+    [
+      "cerro-porteno",
+      1
+    ],
+    [
+      "al-nassr",
+      14
+    ]
+  ],
+  "officialDataWrites": false,
+  "phoneRealTests": "pending user test, responsive Chromium only"
+}

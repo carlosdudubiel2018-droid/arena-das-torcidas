@@ -1,0 +1,30 @@
+{
+  "round": 4,
+  "checks": [
+    "Passeio com o próprio @, boné comprado no laboratório, teclas WASD e setas de toque; deslocamento conferido de 0 para 4 unidades.",
+    "Outros torcedores reais do clube visíveis com @; movimentos ilustrativos, sem prometer multiplayer sincronizado.",
+    "Desafio de Falta com quatro jogadores na barreira, colisão real, goleiro, mira e força; cinco cobranças.",
+    "Energia e ranking de teste compartilhados entre pênaltis e faltas. Duas sessões independentes do mesmo @ confirmaram a mesma energia.",
+    "Partida completa pela API de teste: 4 gols, +40 pontos, +5 moedas e +30 XP; nenhuma cadeira oficial.",
+    "Treino completo de cinco faltas pela interface: resultado e botão de ranking/voltar conferidos.",
+    "Mural: cargo atual conferido no servidor, limite de 60 caracteres, filtro de ofensas e HTML; autorização e rejeições testadas em transação revertida.",
+    "Frase aparece como faixa 3D no portão da praça e persiste após recarregar.",
+    "11 testes Node passaram; SQL confirmou zero escritas em tabelas públicas do jogo.",
+    "SHA256 de todos os arquivos anteriores do oficial e da Rodada 3 preservado. Backups de arquivos, funções e economia guardados antes de cada rodada.",
+    "Partida contada completa pela interface em 375px: 2 gols, +20 pontos (170 para 190), +5 moedas (3630 para 3635), nível 3 e energia 3/6."
+  ],
+  "performance": {
+    "ms": 401,
+    "files": 52,
+    "bytes": 634185,
+    "environment": "Chromium 375x812, servidor local com gzip; não representa aparelho real/4G."
+  },
+  "pending": [
+    "Teste em iPhone/Android reais e 4G após disponibilizar os laboratórios online.",
+    "Publicação dos caminhos de laboratório está bloqueada pela revisão automática: a hospedagem implanta o pacote completo. Nenhum deploy foi feito.",
+    "Filtro de mural é básico e deve ser ampliado conforme surgirem novas formas de ofensa.",
+    "Um aviso MutationObserver sem arquivo de origem apareceu no navegador de inspeção; nenhum dos arquivos carregados do laboratório usa MutationObserver e os listeners de erro do site não o capturaram. Mantido no registro para acompanhamento."
+  ],
+  "official_changed": false,
+  "laboratory_rewards_only": true
+}

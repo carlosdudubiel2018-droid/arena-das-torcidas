@@ -1,0 +1,16 @@
+{
+  "id": "/laboratorio-app/",
+  "name": "Arena das Torcidas",
+  "short_name": "Arena das Torcidas",
+  "lang": "pt-BR",
+  "start_url": "/laboratorio-app/?app=1#mapa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0e1c39",
+  "theme_color": "#0e1c39",
+  "icons": [
+    {"src": "/laboratorio-app/icone-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "/laboratorio-app/icone-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}

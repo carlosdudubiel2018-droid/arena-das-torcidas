@@ -1,0 +1,11 @@
+@media (min-width: 900px) {
+  #intro, body.embedded #intro {
+    left: 20px; width: 220px; padding: 13px 14px; border-radius: 16px;
+  }
+  #intro h1 { font-size: 24px; line-height: 1.04; margin: 6px 0; }
+  #intro p { font-size: 11px; line-height: 1.35; margin: 6px 0 9px; }
+  #intro .eyebrow { font-size: 8px; padding-right: 20px; }
+  #intro .gold { padding: 8px 10px; font-size: 11px; }
+  #intro > small { margin-top: 7px; }
+  body.desktop-intro-dismissed #intro { display: none !important; }
+}

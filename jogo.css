@@ -1,0 +1,155 @@
+/* Map-first game interface. Mobile is the default; side panels are desktop only. */
+:root{--game-paper:#fffbed;--game-green:#245c49;--game-gold:#e6bc64}
+.rank-actions{display:flex;justify-content:center;margin:0 0 24px}
+#map{background:#78b6d8}
+.world-status{position:absolute;z-index:2;left:50%;top:44%;transform:translate(-50%,-50%);max-width:290px;padding:14px 20px;border:1px solid #c9d8bc;border-radius:14px;background:#fffbeded;box-shadow:0 4px 0 #244d3420;color:#486349;font-size:12px;text-align:center;pointer-events:none}
+.world-status[hidden]{display:none}
+.country-label{font:600 11px Figtree,system-ui,sans-serif;color:#626e5e;letter-spacing:.3px;text-shadow:0 1px 0 #fff8d9,0 0 4px #fff8d9;pointer-events:none;white-space:nowrap;opacity:.8}
+#map .stad{width:calc(var(--sz,86px)*var(--marker-scale,1));height:calc(var(--sz,86px)*var(--marker-scale,1)*.84);filter:none;background:transparent;overflow:visible}
+#map .stad svg.map-stadium{width:100%;height:auto;max-width:none;max-height:none;filter:drop-shadow(0 3px 2px #244e3025);transform:none;opacity:1}
+#map .stad .marker-crest{position:absolute;width:24px;height:28px;right:-9px;bottom:auto;top:-11px;padding:3px;border-radius:7px;background:#faffee;border:1px solid #9eb98d;box-shadow:0 2px 3px #213e3425;display:grid;place-items:center}
+#map .marker-crest img{width:100%;height:100%;object-fit:contain}
+img[data-crest-src]{opacity:0}img[data-crest-src].crest-ready{opacity:1}img[data-crest-src].crest-failed{visibility:hidden}
+#map .marker-crest:not(:has(.crest-ready)),.map-cluster .cluster-crests:not(:has(.crest-ready)){background:transparent;border-color:transparent;box-shadow:none}
+#map .stad .lbl{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:0;font-size:10px}
+#map .marker-progress{display:none;position:absolute;top:calc(100% + 20px);left:50%;transform:translateX(-50%);width:76px;padding:2px 6px;border:1px solid #bed0ac;border-radius:6px;background:#faffedf2;color:#3c6445;font-size:9px;line-height:1.3;box-shadow:0 2px 2px #315b3020;pointer-events:none}
+#map.map-zoomed .marker-progress{display:block}#map .marker-progress>span{display:block;text-align:center;white-space:nowrap}
+#map .marker-progress i{display:block;height:3px;margin-top:3px;border-radius:3px;background:#d8e5c8;overflow:hidden}#map .marker-progress b{display:block;height:100%;background:#4d9858}
+.city-label,.state-label{pointer-events:none;white-space:nowrap;color:#416346;font:600 12px/1.2 Figtree,system-ui,sans-serif;text-shadow:0 1px #f8ffed,0 0 5px #f8ffed,0 0 5px #f8ffed}
+.city-label:before{content:'•';color:#5e8552;margin-right:4px}.state-label{font-size:11px;letter-spacing:2px;color:#729168;opacity:.8}
+.maplibregl-ctrl-bottom-left{left:4px;bottom:86px}.maplibregl-ctrl-group{border:1px solid #b6cfa5;border-radius:9px!important;background:#f8ffed!important;box-shadow:0 3px 0 #315b3025!important;overflow:hidden}
+.maplibregl-ctrl-group button{width:34px;height:34px}.team-open .maplibregl-ctrl-bottom-left,.group-open .maplibregl-ctrl-bottom-left{top:56px;bottom:auto}
+#map .stad.sel svg.map-stadium{filter:drop-shadow(0 0 5px #e9bd63);}
+.map-cluster{width:var(--cluster-size,90px);height:calc(var(--cluster-size,90px)*.94);display:block;position:absolute;background:transparent!important;border:0;border-radius:0;box-shadow:none!important;padding:0;overflow:visible}
+.map-cluster .map-stadium{display:block;width:100%;height:auto;filter:drop-shadow(0 3px 2px #244e302b)}
+.map-cluster .cluster-crests{position:absolute;top:39%;left:50%;transform:translateX(-50%);display:flex;height:21px;gap:1px;margin:0;align-items:center}
+.map-cluster .cluster-crests img{width:19px;height:21px;object-fit:contain;filter:drop-shadow(0 1px 1px #fff);margin:0}
+.map-cluster[data-level="0"] .cluster-crests{top:-2px;height:22px;padding:2px 4px;border-radius:7px;background:#faffedf2;border:1px solid #b6cfa5;box-shadow:0 1px 2px #315b3020}
+/* Keep geometry for lazy loading, but reveal the entire box only on load. */
+#map .marker-crest:not(.crest-box-ready),#map .cluster-crests:not(.crest-box-ready){opacity:0!important}
+.map-cluster .cluster-word{position:absolute;bottom:-2px;left:50%;transform:translateX(-50%);display:block;white-space:nowrap;font-size:10px;line-height:20px;background:#fff8df;color:#345b43;border:1px solid #a8b590;border-radius:6px;box-shadow:0 2px 0 #29473225;padding:0 7px;font-weight:600}
+.map-cluster .cluster-word b{font-size:12px;display:inline}
+.map-cluster:hover .map-stadium,.map-cluster:focus-visible .map-stadium{filter:drop-shadow(0 0 5px #f1d889)}
+.map-cluster:focus-visible,#map .stad:focus-visible{outline:3px solid #ce9f41;outline-offset:5px;border-radius:12px}
+.game-counters{position:absolute;z-index:3;top:64px;left:12px;right:12px;display:flex;align-items:center;justify-content:center;gap:16px;color:#42604b;font-size:10px;background:#fffbedeb;border:1px solid #cbd4b8;border-radius:9px;padding:7px 9px;box-shadow:0 2px 0 #28483214;pointer-events:none}
+.game-counters b{color:#264f3b;font-size:12px}
+.game-counters .catalog-counter{display:none}
+.mobile-welcome{top:108px;padding:9px 11px}
+.mobile-welcome p{font-size:10px}.mobile-welcome strong{font-size:12px}
+.personal-entry .mobile-welcome{display:none}
+.activity-panel{display:none;position:absolute;z-index:6;bottom:0;left:0;right:0;max-height:65%;background:var(--game-paper);border:1px solid #bfcdb2;border-radius:18px 18px 0 0;box-shadow:0 -8px 30px #28483225;overflow:hidden;flex-direction:column}
+.activity-open .activity-panel{display:flex}.activity-open .boletim,.activity-open .mobile-welcome{display:none}
+.activity-heading{display:flex;align-items:center;justify-content:space-between;padding:17px 18px 12px;border-bottom:1px solid #dce2ca;flex-shrink:0}
+.activity-heading .eyebrow{font-size:8px;letter-spacing:1.1px;margin:0;color:#6a7e5b}
+.activity-heading h3{font:700 27px/1.1 var(--display);letter-spacing:.2px;margin:4px 0 0;color:#294f3c}
+.activity-heading button{border:0;border-radius:50%;background:#eaf0df;color:#456347;font-size:23px;width:36px;height:36px;cursor:pointer}
+.activity-list{overflow:auto;overscroll-behavior:contain;flex:1;min-height:0;padding:4px 15px}
+.activity-item{display:flex;gap:11px;align-items:flex-start;width:100%;text-align:left;border:0;border-bottom:1px solid #e3e7d5;padding:14px 0;background:transparent;color:#2c4e3d;font:inherit;cursor:pointer}
+.activity-item:last-child{border-bottom:0}
+.event-icon{flex:0 0 32px;width:32px;height:34px;display:grid;place-items:center;background:#e8ecd5;border:1px solid #cad5b7;border-radius:9px;box-shadow:0 2px 0 #adbca255;color:#436749;font-size:19px}
+.activity-item>span:last-child{display:grid;gap:5px;min-width:0}.activity-item small{font-size:8px;font-weight:700;letter-spacing:1px;color:#78845d}
+.activity-item b{font-size:12px;line-height:1.4;overflow-wrap:anywhere;font-weight:700}.activity-item span span{font-size:11px;line-height:1.5;color:#758069}.activity-item em{font-size:10px;color:#377854;font-style:normal}
+.activity-updated{font-size:9px;color:#7e876f;padding:11px 18px;margin:0;border-top:1px solid #e3e7d5;flex-shrink:0}
+.activity-empty{padding:15px 2px;font-size:12px;line-height:1.7;color:#627757}
+.activity-toggle{position:absolute;z-index:4;left:50%;transform:translateX(-50%);bottom:29px;background:#245c49;color:#fff8e5;border:1px solid #183f33;box-shadow:0 3px 0 #173a2f;border-radius:10px;min-height:43px;padding:10px 11px;font-size:11px;font-weight:600;cursor:pointer;white-space:nowrap}
+.activity-toggle span{padding:1px 5px;background:#f2d58f;color:#244e38;border-radius:4px;margin-left:3px;font-size:10px}
+.team-open .activity-toggle,.group-open .activity-toggle,.intro-open .activity-toggle{display:none}
+.season-badge{bottom:88px;right:12px}.sheet .stadium-detail .stadium-v2 *{animation:none!important}
+#map .level-up .map-stadium{animation:stadium-earned 1.8s ease-out 1}
+@keyframes stadium-earned{0%,100%{filter:drop-shadow(0 2px 2px #244e3025)}40%{filter:drop-shadow(0 0 15px #f1c65d);transform:translateY(-5px) scale(1.1)}}
+@media(min-width:761px){
+ .match-sidebar{position:absolute;top:106px;left:20px;bottom:auto;width:254px;max-height:calc(100% - 170px);height:auto;overflow:auto;border:1px solid #b6c6a7;border-radius:17px;background:#fffbedf5;padding:20px;box-shadow:0 5px 0 #354d3123,0 8px 22px #24482d15;z-index:3}
+ .match-sidebar h2{font-size:37px;line-height:1.05;margin:14px 0 10px;max-width:none}
+ .match-sidebar .intro{font-size:11px;line-height:1.65;margin-bottom:17px}
+ .match-sidebar .discover{width:100%;margin:0 0 10px;min-height:44px;font-size:12px;box-shadow:0 3px 0 #214e3a}
+ .sidebar-instagram{font-size:10px;display:block;background:#e7edda;color:#335b41;border:1px solid #c8d3b6;padding:10px;text-align:center}
+ .match-sidebar .season-label{font-size:8px;margin:0 0 15px;padding:0 0 10px}
+ .match-sidebar>.eyebrow{font-size:8px;margin-bottom:6px}
+ .match-sidebar .community-stats,.match-sidebar .community-invite,.match-sidebar .portugal-head,.match-sidebar .portugal-clubs,.match-sidebar .sidebar-divider,.match-sidebar .section-caption,.match-sidebar .stadium-showcase,.match-sidebar .showcase-caption,.match-sidebar .pilot-note{display:none!important}
+ .mapctl{top:20px;left:20px;max-width:none;padding:4px;border-radius:12px;background:#fffbedf5;border-color:#c3cfb0;box-shadow:0 3px 0 #38553520}
+ .mapctl button{min-width:75px}
+ .game-counters{left:20px;right:auto;top:76px;width:max-content;padding:7px 10px;font-size:10px;gap:12px}
+ .game-counters .catalog-counter{display:inline}
+ .activity-toggle{left:auto;right:20px;top:20px;bottom:auto;transform:none}
+ .activity-panel{left:auto;right:20px;top:76px;bottom:auto;width:268px;max-height:calc(100% - 160px);border-radius:16px;z-index:3}
+ .activity-panel .activity-list{max-height:430px}.activity-heading{padding:15px}.activity-heading h3{font-size:25px}
+ .sheet{z-index:7;top:76px;right:20px;max-height:calc(100% - 92px)}
+ .team-open .activity-panel,.group-open .activity-panel{display:none!important}
+ .boletim{right:20px;bottom:24px}.season-badge{right:20px;bottom:82px}
+ .country-label{font-size:12px}
+}
+@media(min-width:761px){.team-open .maplibregl-ctrl-bottom-left,.group-open .maplibregl-ctrl-bottom-left{top:auto;bottom:86px}}
+@media(min-width:1200px){.activity-panel{display:flex}.activity-toggle{display:none}.activity-heading button{display:none}.activity-panel .activity-list{max-height:410px}}
+@media(max-width:760px){
+ .rank-table th:nth-child(7),.rank-table td:nth-child(7){display:none}
+ .rank-table[data-sort="semana"] th:nth-child(6),.rank-table[data-sort="semana"] td:nth-child(6),.rank-table[data-sort="n"] th:nth-child(6),.rank-table[data-sort="n"] td:nth-child(6){display:none}
+ .rank-table[data-sort="semana"] th:nth-child(7),.rank-table[data-sort="semana"] td:nth-child(7),.rank-table[data-sort="n"] th:nth-child(5),.rank-table[data-sort="n"] td:nth-child(5){display:table-cell;width:65px}
+ .rank-table th:nth-child(6){width:65px}.rank-table th,.rank-table td{padding-left:5px;padding-right:5px}
+ .team-open .mapctl,.group-open .mapctl,.team-open .maplibregl-ctrl-bottom-left,.group-open .maplibregl-ctrl-bottom-left{display:none}
+ .match-sidebar .discover{margin:14px 0 10px}.sidebar-instagram{display:block;font-size:12px;text-align:center}
+ .intro-open-button{font-size:10px;padding:9px 8px;bottom:29px}.boletim{min-width:100px;max-width:116px;bottom:29px}.boletim summary{gap:8px;padding:10px 9px}.boletim summary small{display:none}.boletim[open]{width:250px;max-width:calc(100% - 24px)}
+ .sheet{max-height:68%}.team-open .game-counters,.group-open .game-counters{display:none}
+ .activity-open .activity-toggle{display:none}
+}
+@media(prefers-reduced-motion:reduce){#map .level-up .map-stadium{animation:none}}
+@media(max-width:350px){.intro-open-button{font-size:9px;padding:8px 6px}.activity-toggle{font-size:10px;padding:8px}.activity-toggle span{margin-left:1px;padding:1px 3px}.boletim{min-width:88px}}
+
+/* Gramado Vivo: shared camera for the real game, no scoring changes. */
+.camera-controls{position:absolute;z-index:5;top:112px;right:20px;display:flex;align-items:center;gap:3px;padding:5px;background:#fffbedf5;border:1px solid #b6c6a7;border-radius:12px;box-shadow:0 3px 0 #354d3123}
+.camera-controls span{font-size:8px;letter-spacing:1px;font-weight:800;color:#48704b;padding:0 5px}.camera-controls button{min-width:34px;min-height:32px;border:0;border-radius:7px;background:transparent;color:#315a42;font:600 11px var(--body);cursor:pointer}.camera-controls button[aria-pressed="true"]{background:#245c49;color:#fffbed}.camera-controls button:disabled{opacity:.4;cursor:default}
+@media(min-width:1200px){.camera-controls{right:306px;top:20px}}
+@media(max-width:760px){.camera-controls{top:96px;right:12px;padding:3px}.camera-controls span{display:none}.camera-controls button{min-height:28px;min-width:32px}.mobile-welcome{top:144px}.team-open .camera-controls,.group-open .camera-controls,.intro-open .camera-controls{display:none}}
+
+/* The selected club now uses geometry in the map, rather than a flat SVG. */
+#map .stad.native-stadium svg.map-stadium{opacity:0!important}
+#map .stad.native-stadium .marker-crest{left:50%;right:auto;top:var(--crest-top,-80px);transform:translateX(-50%)}
+.group-open .cluster-picker{top:auto;bottom:16px;left:50%;right:auto;transform:translateX(-50%);width:min(640px,calc(100% - 24px));max-height:170px;border-radius:14px}
+.group-open .group-heading{padding:8px 12px}.group-open .group-heading .eyebrow{margin:0;font-size:9px}.group-open .group-heading h3{font-size:14px}
+.group-open .group-options{display:flex;gap:6px;padding:6px 10px;overflow-x:auto;overflow-y:hidden}
+.group-open .group-options button{width:auto;flex:0 0 auto;min-height:48px;gap:7px;padding:5px 8px;border:1px solid #e1e8d9;border-radius:8px}
+.group-open .group-options img{width:23px;height:26px}.group-open .group-options b{font-size:11px}.group-open .group-options small{font-size:9px}
+@media(max-width:760px){.group-open .cluster-picker{bottom:8px;max-height:145px}.group-open .group-options button{max-width:155px}}
+@media(max-width:760px){.team-open .camera-controls{display:flex;top:8px;right:12px}.team-open #camera-turn,.team-open #camera-replay{display:none}}
+#map .stad{height:calc(var(--sz,86px)*var(--marker-scale,1)*var(--stadium-ratio,.84))}
+#map .stad.native-stadium .lbl{top:var(--label-top,100%)}#map .stad.native-stadium .marker-progress{top:calc(var(--label-top,100%) + 22px)}
+.seat-inspector{padding:10px 20px;background:#f3f6eb}.seat-inspector small{display:block;font-size:10px;color:#6b7d63;line-height:1.5;margin-top:5px}.seat-inspector .btn{font-size:11px;padding:8px 12px}
+#map .stad.native-stadium .lbl{transform:translateY(22px)}
+#map .stad.native-stadium .marker-progress{transform:translateY(24px)}
+
+.construction-status{display:grid;gap:5px;padding:12px 18px;background:#f1f4e7;border-bottom:1px solid #d5dfc7;color:#305c43}.construction-status b{font-size:12px}.construction-status span{font-size:10px;line-height:1.5;color:#65775a}.stadium-detail>svg.geometry-stadium{display:block;width:100%;height:220px;padding:24px}
+.fan-avatar-label{border:1px solid #b9cda9;border-radius:7px;background:#fffbeded;padding:3px 6px;font:700 9px system-ui;color:#315d44;white-space:nowrap;cursor:pointer;box-shadow:0 2px 4px #244c3430}.fan-avatar-label.own{background:#f8e6a5;border-color:#c5a448}.fan-avatar-label.compact{padding:2px 4px}.arrival-avatar{pointer-events:none;display:grid;justify-items:center;animation:arena-arrive 5s ease-out both;font:700 10px system-ui;color:#245c49}.arrival-avatar strong,.arrival-avatar small{background:#fffbed;padding:3px 5px;border-radius:5px}.arrival-person{position:relative;width:24px;height:40px;display:block}.arrival-person i{position:absolute;left:7px;top:0;width:12px;height:12px;background:#d9a778;border-radius:50%}.arrival-person b{position:absolute;left:4px;top:13px;width:18px;height:18px;background:var(--jersey);border-radius:5px}.arrival-person b:after{content:"";position:absolute;top:18px;left:2px;width:5px;height:10px;background:#244439;box-shadow:8px 0 #244439}@keyframes arena-arrive{0%{transform:translate(-100px,20px);opacity:0}15%{opacity:1}70%,100%{transform:translate(0,0);opacity:1}}@media(prefers-reduced-motion:reduce){.arrival-avatar{animation:none}}
+.arrival-avatar{animation:none;display:block}.arrival-travel{display:grid;justify-items:center;animation:arena-arrive 5s ease-out both}@media(prefers-reduced-motion:reduce){.arrival-travel{animation:none}}
+.rank-table .chairs-primary{font-size:23px;font-weight:800;color:#245c40}.rank-table .supporters-secondary{font-size:12px;color:#74816e}.rank-table th.chairs-primary{font-size:11px}.stats .stat:first-child b{font-size:36px}.stats .stat:nth-child(2) b{font-size:21px;color:#687b61}.game-counters .chairs-primary b{font-size:22px}.game-counters .supporters-secondary{font-size:10px;color:#687b61}.game-counters .supporters-secondary b{font-size:13px}
+@media(max-width:760px){.rank-table th:nth-child(5),.rank-table td:nth-child(5){display:table-cell;width:65px}.rank-table th:nth-child(6),.rank-table td:nth-child(6){display:none}.rank-table td.chairs-primary{font-size:22px}.stats .stat:first-child b{font-size:30px}.stats .stat:nth-child(2) b{font-size:19px}}
+.stadium-detail.bairro-preview{background:#d6eadb;height:245px;min-height:245px}.bairro-preview #club-neighborhood-preview{width:100%;height:100%;display:grid;place-items:center}.bairro-preview #club-neighborhood-preview img,.bairro-preview #club-neighborhood-preview svg{display:block;width:100%;height:100%;max-width:none;object-fit:contain;filter:none}.stadium-detail.bairro-preview>span{background:#fffbeee8;color:#174d37;padding:4px 7px;border-radius:6px;bottom:8px;right:9px}@media(max-width:760px){.stadium-detail.bairro-preview{height:210px;min-height:210px}}
+
+/* Neighborhood previews share the daytime art direction of the official map. */
+.map-closeup .native-stadium .lbl,.map-closeup .native-stadium .marker-progress,.map-closeup .native-stadium .marker-crest,.map-closeup .native-stadium .stadium-honors{visibility:hidden}
+.neighborhood-evolution .preview-club span{color:#143e30}
+.neighborhood-evolution{background:#e2eedb!important;border:1px solid #b7ccad;min-height:360px}.neighborhood-evolution .stadium-caption{color:#143e30!important;background:#f7faf2!important}.neighborhood-evolution .stadium-caption p,.neighborhood-evolution .stadium-caption strong,.neighborhood-evolution .stadium-caption h3{color:#143e30!important}.neighborhood-photo{display:flex;align-items:center;justify-content:center;overflow:hidden;background:#d6eadb}.neighborhood-photo img,.neighborhood-photo svg{width:100%;height:100%;object-fit:contain}.stage-thumb{background:#d6eadb;border-radius:8px;overflow:hidden}.stage-thumb img{width:100%;height:100%;object-fit:contain}.ladder-neighborhood{width:100px;height:68px;background:#d6eadb;border-radius:8px;overflow:hidden}.ladder-neighborhood img,.ladder-neighborhood svg{width:100%;height:100%;object-fit:contain}.seat-inspector{display:flex;flex-wrap:wrap;gap:8px}.seat-inspector small{flex-basis:100%}@media(max-width:760px){.neighborhood-evolution{min-height:0}.neighborhood-evolution .stadium-render{min-height:210px}.ladder-neighborhood{width:74px;height:56px}.stage-thumb{min-height:55px}}
+
+/* Collapsed sheet retains the exact camera pose. */
+.sheet-mini{display:none}.sheet.folded{top:auto!important;bottom:14px;right:14px;width:min(350px,calc(100% - 28px));height:52px;min-height:0;max-height:52px;border-radius:14px;overflow:hidden;padding:0}.sheet.folded>:not(.sheet-mini){display:none!important}.sheet.folded .sheet-mini{height:100%;display:flex;align-items:center;padding:4px 8px;gap:8px}.sheet-mini button{border:0;background:transparent;color:#174d37;cursor:pointer;font-weight:700;padding:8px;min-width:0}.sheet-mini #sheet-expand{flex:1;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.sheet-mini #sheet-dismiss{font-size:24px}#map .stad svg.map-stadium{transition:opacity .18s ease}#map .stad.native-stadium svg.map-stadium{visibility:visible!important}.map-cluster .neighborhood-marker{max-width:100%}
+/* Rules containers must shrink with the viewport, including select options and long button labels. */
+#view-regras,#view-regras .wrap,#view-regras .card,#view-regras .grid2,#view-regras .evolution-scene,#view-regras .evolution-tools,#view-regras .evolution-tabs{min-width:0;max-width:100%}#view-regras .wrap>*{min-width:0}#view-regras .btn{white-space:normal;max-width:100%;overflow-wrap:anywhere}#view-regras select{width:100%;max-width:100%;min-width:0}#view-regras p,#view-regras a{overflow-wrap:anywhere}.ladder>div{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:12px 0;border-bottom:1px solid #d9e2d2}.ladder>div>.ladder-neighborhood{grid-column:1/-1;display:block;width:100%;height:auto;aspect-ratio:1.6;min-width:0;background:#d6eadb}.ladder>div>.ladder-neighborhood img,.ladder>div>.ladder-neighborhood svg{display:block;width:100%;height:100%;object-fit:contain}.ladder>div>span{text-align:right}.ladder>div>strong{font-size:16px}.neighborhood-photo img{opacity:0;animation:neighborhood-photo-in .18s forwards}@keyframes neighborhood-photo-in{to{opacity:1}}
+@media(max-width:760px){#view-regras .grid2,#view-regras .evolution-scene{grid-template-columns:minmax(0,1fr)}#view-regras .evolution-tools label{min-width:0;flex-basis:100%}#view-regras .season-heading,#view-regras .season-steps,#view-regras .season-legacy{min-width:0}#view-regras .evolution-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}#view-regras .evolution-tabs>*{min-width:0}.sheet.folded{left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));width:auto}.ladder>div>.ladder-neighborhood{width:100%;height:auto}.ladder>div>span{font-size:11px}}
+@media(prefers-reduced-motion:reduce){#map .stad svg.map-stadium{transition:none}.neighborhood-photo img{animation:none;opacity:1}}
+
+.camera-controls #camera-motion{white-space:nowrap}#map[data-crowd-motion="paused"] .arrival-avatar{animation:none}@media(max-width:760px){.camera-controls #camera-motion{padding:7px 8px;font-size:10px}}
+/* Approved rounds 1+2, visual only. */
+#map .stad .marker-picture,#map .map-cluster .marker-picture{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;filter:drop-shadow(0 3px 2px #244e3025);transition:opacity .18s ease}
+#map .miniature-ready>svg.map-stadium{visibility:hidden!important}#map .stad.native-stadium .marker-picture{opacity:0!important}#map .map-cluster .marker-picture{z-index:0}
+#map .map-cluster .cluster-crests,#map .map-cluster .cluster-word{z-index:1}#map .map-cluster .cluster-crests{top:65%}#map .map-cluster[data-level="0"] .cluster-crests{top:61%}#map .stad .marker-crest{z-index:1}
+#map .medal-glow{filter:drop-shadow(0 -3px 6px #edbd5270)!important}
+#map .fan-avatar-label{display:block!important;min-width:0;max-width:260px;padding:4px 7px;border-radius:7px;background:#073e2ceb;color:white;border:1px solid #e8efd5;font:750 10px/1.25 system-ui;white-space:nowrap;text-align:left;box-shadow:0 2px 6px #173c3220}
+#map .fan-avatar-label small{display:block;font-size:8px;text-transform:uppercase;color:#e2c272}#map .fan-avatar-label.own{background:#f3cc62;color:#073e2c}#map .fan-avatar-label.own small{color:#35543c}
+.club-equipment{padding:18px;border-top:1px solid #d7dfcd}.club-equipment h3{margin:0 0 8px}.equipment-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.equipment-card{padding:10px;border:1px solid #c9d7bd;border-radius:10px;background:#f6faee;font-size:11px;overflow-wrap:anywhere}.equipment-card b,.equipment-card small{display:block}.equipment-card small{font-size:10px;color:#61705b;margin-top:5px}.equipment-card.installed{border-color:#49805b;background:#e2efdc}
+@media(max-width:760px){#map .fan-avatar-label{font-size:9px;max-width:200px}#map .fan-avatar-label small{font-size:7px}.club-equipment{padding:13px}}
+
+/* Rank decoration is immediate, including before WebGL snapshots arrive. */
+#map .map-rank-award{position:absolute;left:50%;top:-12px;transform:translateX(-50%);width:29px;height:31px;z-index:2;pointer-events:none;filter:drop-shadow(0 2px 1px #304a3433)}
+#map .map-rank-award svg{display:block;width:100%;height:100%;max-width:none;filter:none}#map .map-rank-award.rank-1{filter:drop-shadow(0 0 5px #f3cc6570)}
+#map .native-stadium .map-rank-award{visibility:hidden}#map .miniature-ready>svg.instant-miniature{visibility:hidden!important}#map .native-stadium>svg.instant-miniature{opacity:0!important}
+#map .fan-avatar-label[hidden]{display:none!important}
+
+#map .instant-miniature{position:absolute;inset:0;width:100%;height:100%!important}#map .map-rank-award{width:26px;height:28px}

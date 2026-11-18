@@ -1,0 +1,1316 @@
+[
+  {
+    "id": "flamengo",
+    "match": "Flamengo",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/819.png",
+    "status": "ok"
+  },
+  {
+    "id": "fluminense",
+    "match": "Fluminense",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3445.png",
+    "status": "ok"
+  },
+  {
+    "id": "vasco",
+    "match": "Vasco da Gama",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3454.png",
+    "status": "ok"
+  },
+  {
+    "id": "botafogo",
+    "match": "Botafogo",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/6086.png",
+    "status": "ok"
+  },
+  {
+    "id": "corinthians",
+    "match": "Corinthians",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/874.png",
+    "status": "ok"
+  },
+  {
+    "id": "palmeiras",
+    "match": "Palmeiras",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2029.png",
+    "status": "ok"
+  },
+  {
+    "id": "sao-paulo",
+    "match": "São Paulo",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2026.png",
+    "status": "ok"
+  },
+  {
+    "id": "santos",
+    "match": "Santos",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2674.png",
+    "status": "ok"
+  },
+  {
+    "id": "bragantino",
+    "match": "Red Bull Bragantino",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/6079.png",
+    "status": "ok"
+  },
+  {
+    "id": "mirassol",
+    "match": "Mirassol",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/9169.png",
+    "status": "ok"
+  },
+  {
+    "id": "guarani",
+    "match": "Guarani",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3448.png",
+    "status": "ok"
+  },
+  {
+    "id": "ponte-preta",
+    "match": "Ponte Preta",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3459.png",
+    "status": "ok"
+  },
+  {
+    "id": "novorizontino",
+    "match": "Novorizontino",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/18127.png",
+    "status": "ok"
+  },
+  {
+    "id": "botafogo-sp",
+    "match": "Botafogo-SP",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/10281.png",
+    "status": "ok"
+  },
+  {
+    "id": "gremio",
+    "match": "Grêmio",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/6273.png",
+    "status": "ok"
+  },
+  {
+    "id": "internacional",
+    "match": "Internacional",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/1936.png",
+    "status": "ok"
+  },
+  {
+    "id": "juventude",
+    "match": "Juventude",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/6270.png",
+    "status": "ok"
+  },
+  {
+    "id": "atletico-mg",
+    "match": "Atlético-MG",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/7632.png",
+    "status": "ok"
+  },
+  {
+    "id": "cruzeiro",
+    "match": "Cruzeiro",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2022.png",
+    "status": "ok"
+  },
+  {
+    "id": "america-mg",
+    "match": "América Mineiro",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/6154.png",
+    "status": "ok"
+  },
+  {
+    "id": "bahia",
+    "match": "Bahia",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/9967.png",
+    "status": "ok"
+  },
+  {
+    "id": "vitoria",
+    "match": "Vitória",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3457.png",
+    "status": "ok"
+  },
+  {
+    "id": "fortaleza",
+    "match": "Fortaleza",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/6272.png",
+    "status": "ok"
+  },
+  {
+    "id": "ceara",
+    "match": "Ceará",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/9969.png",
+    "status": "ok"
+  },
+  {
+    "id": "sport",
+    "match": "Sport",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/7635.png",
+    "status": "ok"
+  },
+  {
+    "id": "nautico",
+    "match": "Náutico",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/7633.png",
+    "status": "ok"
+  },
+  {
+    "id": "santa-cruz",
+    "match": "Santa Cruz",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/4929.png",
+    "status": "ok"
+  },
+  {
+    "id": "athletico-pr",
+    "match": "Athletico-PR",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3458.png",
+    "status": "ok"
+  },
+  {
+    "id": "coritiba",
+    "match": "Coritiba",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3456.png",
+    "status": "ok"
+  },
+  {
+    "id": "operario",
+    "match": "Operário PR",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/18187.png",
+    "status": "ok"
+  },
+  {
+    "id": "goias",
+    "match": "Goiás",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3395.png",
+    "status": "ok"
+  },
+  {
+    "id": "atletico-go",
+    "match": "Atlético Goianiense",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/10357.png",
+    "status": "ok"
+  },
+  {
+    "id": "vila-nova",
+    "match": "Vila Nova",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/9973.png",
+    "status": "ok"
+  },
+  {
+    "id": "cuiaba",
+    "match": "Cuiabá",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/17313.png",
+    "status": "ok"
+  },
+  {
+    "id": "chapecoense",
+    "match": "Chapecoense",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/9318.png",
+    "status": "ok"
+  },
+  {
+    "id": "criciuma",
+    "match": "Criciúma",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/9971.png",
+    "status": "ok"
+  },
+  {
+    "id": "avai",
+    "match": "Avaí",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/9966.png",
+    "status": "ok"
+  },
+  {
+    "id": "figueirense",
+    "match": "Figueirense",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3461.png",
+    "status": "ok"
+  },
+  {
+    "id": "remo",
+    "match": "Remo",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/4936.png",
+    "status": "ok"
+  },
+  {
+    "id": "paysandu",
+    "match": "Paysandu",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/15424.png",
+    "status": "ok"
+  },
+  {
+    "id": "crb",
+    "match": "CRB",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/9970.png",
+    "status": "ok"
+  },
+  {
+    "id": "csa",
+    "match": "CSA",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/7531.png",
+    "status": "ok"
+  },
+  {
+    "id": "abc",
+    "match": "ABC",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/9965.png",
+    "status": "ok"
+  },
+  {
+    "id": "amazonas",
+    "match": "Amazonas",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/21888.png",
+    "status": "ok"
+  },
+  {
+    "id": "real-madrid",
+    "match": "Real Madrid",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png",
+    "status": "ok"
+  },
+  {
+    "id": "barcelona",
+    "match": "Barcelona",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png",
+    "status": "ok"
+  },
+  {
+    "id": "atletico-madrid",
+    "match": "Atlético Madrid",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png",
+    "status": "ok"
+  },
+  {
+    "id": "sevilla",
+    "match": "Sevilla",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/243.png",
+    "status": "ok"
+  },
+  {
+    "id": "manchester-united",
+    "match": "Manchester United",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
+    "status": "ok"
+  },
+  {
+    "id": "manchester-city",
+    "match": "Manchester City",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
+    "status": "ok"
+  },
+  {
+    "id": "liverpool",
+    "match": "Liverpool",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
+    "status": "ok"
+  },
+  {
+    "id": "arsenal",
+    "match": "Arsenal",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
+    "status": "ok"
+  },
+  {
+    "id": "chelsea",
+    "match": "Chelsea",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/363.png",
+    "status": "ok"
+  },
+  {
+    "id": "tottenham",
+    "match": "Tottenham Hotspur",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png",
+    "status": "ok"
+  },
+  {
+    "id": "newcastle",
+    "match": "Newcastle United",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png",
+    "status": "ok"
+  },
+  {
+    "id": "juventus",
+    "match": "Juventus",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
+    "status": "ok"
+  },
+  {
+    "id": "milan",
+    "match": "AC Milan",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
+    "status": "ok"
+  },
+  {
+    "id": "inter-milao",
+    "match": "Internazionale",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
+    "status": "ok"
+  },
+  {
+    "id": "napoli",
+    "match": "Napoli",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
+    "status": "ok"
+  },
+  {
+    "id": "roma",
+    "match": "AS Roma",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
+    "status": "ok"
+  },
+  {
+    "id": "bayern",
+    "match": "Bayern Munich",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
+    "status": "ok"
+  },
+  {
+    "id": "dortmund",
+    "match": "Borussia Dortmund",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
+    "status": "ok"
+  },
+  {
+    "id": "psg",
+    "match": "Paris Saint-Germain",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
+    "status": "ok"
+  },
+  {
+    "id": "marseille",
+    "match": "Marseille",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/176.png",
+    "status": "ok"
+  },
+  {
+    "id": "benfica",
+    "match": "Benfica",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/1929.png",
+    "status": "ok"
+  },
+  {
+    "id": "sporting",
+    "match": "Sporting CP",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2250.png",
+    "status": "ok"
+  },
+  {
+    "id": "porto",
+    "match": "FC Porto",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/437.png",
+    "status": "ok"
+  },
+  {
+    "id": "aston-villa",
+    "match": "Aston Villa",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
+    "status": "ok"
+  },
+  {
+    "id": "west-ham",
+    "match": "West Ham United",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/371.png",
+    "status": "ok"
+  },
+  {
+    "id": "nottingham-forest",
+    "match": "Nottingham Forest",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/393.png",
+    "status": "ok"
+  },
+  {
+    "id": "brighton",
+    "match": "Brighton & Hove Albion",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png",
+    "status": "ok"
+  },
+  {
+    "id": "athletic-bilbao",
+    "match": "Athletic Club",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/93.png",
+    "status": "ok"
+  },
+  {
+    "id": "real-sociedad",
+    "match": "Real Sociedad",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
+    "status": "ok"
+  },
+  {
+    "id": "real-betis",
+    "match": "Real Betis",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
+    "status": "ok"
+  },
+  {
+    "id": "valencia",
+    "match": "Valencia",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/94.png",
+    "status": "ok"
+  },
+  {
+    "id": "villarreal",
+    "match": "Villarreal",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
+    "status": "ok"
+  },
+  {
+    "id": "atalanta",
+    "match": "Atalanta",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
+    "status": "ok"
+  },
+  {
+    "id": "lazio",
+    "match": "Lazio",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/112.png",
+    "status": "ok"
+  },
+  {
+    "id": "fiorentina",
+    "match": "Fiorentina",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/109.png",
+    "status": "ok"
+  },
+  {
+    "id": "bologna",
+    "match": "Bologna",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png",
+    "status": "ok"
+  },
+  {
+    "id": "bayer-leverkusen",
+    "match": "Bayer Leverkusen",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
+    "status": "ok"
+  },
+  {
+    "id": "rb-leipzig",
+    "match": "RB Leipzig",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
+    "status": "ok"
+  },
+  {
+    "id": "frankfurt",
+    "match": "Eintracht Frankfurt",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/125.png",
+    "status": "ok"
+  },
+  {
+    "id": "stuttgart",
+    "match": "VfB Stuttgart",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
+    "status": "ok"
+  },
+  {
+    "id": "lyon",
+    "match": "Lyon",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/167.png",
+    "status": "ok"
+  },
+  {
+    "id": "monaco",
+    "match": "AS Monaco",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/174.png",
+    "status": "ok"
+  },
+  {
+    "id": "lille",
+    "match": "Lille",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/166.png",
+    "status": "ok"
+  },
+  {
+    "id": "nice",
+    "match": "Nice",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2502.png",
+    "status": "ok"
+  },
+  {
+    "id": "braga",
+    "match": "Braga",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2994.png",
+    "status": "ok"
+  },
+  {
+    "id": "vitoria-guimaraes",
+    "match": "Vitória de Guimaraes",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/5309.png",
+    "status": "ok"
+  },
+  {
+    "id": "ajax",
+    "match": "Ajax Amsterdam",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/139.png",
+    "status": "ok"
+  },
+  {
+    "id": "psv",
+    "match": "PSV Eindhoven",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
+    "status": "ok"
+  },
+  {
+    "id": "feyenoord",
+    "match": "Feyenoord Rotterdam",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
+    "status": "ok"
+  },
+  {
+    "id": "celtic",
+    "match": "Celtic",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/256.png",
+    "status": "ok"
+  },
+  {
+    "id": "rangers",
+    "match": "Rangers",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/257.png",
+    "status": "ok"
+  },
+  {
+    "id": "boca-juniors",
+    "match": "Boca Juniors",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+    "status": "ok"
+  },
+  {
+    "id": "river-plate",
+    "match": "River Plate",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png",
+    "status": "ok"
+  },
+  {
+    "id": "racing-argentina",
+    "match": "Racing Club",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/15.png",
+    "status": "ok"
+  },
+  {
+    "id": "independiente",
+    "match": "Independiente",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
+    "status": "ok"
+  },
+  {
+    "id": "san-lorenzo",
+    "match": "San Lorenzo",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png",
+    "status": "ok"
+  },
+  {
+    "id": "estudiantes",
+    "match": "Estudiantes de La Plata",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/8.png",
+    "status": "ok"
+  },
+  {
+    "id": "velez",
+    "match": "Vélez Sarsfield",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png",
+    "status": "ok"
+  },
+  {
+    "id": "rosario-central",
+    "match": "Rosario Central",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png",
+    "status": "ok"
+  },
+  {
+    "id": "newells",
+    "match": "Newell's Old Boys",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png",
+    "status": "ok"
+  },
+  {
+    "id": "penarol",
+    "match": "Peñarol",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2683.png",
+    "status": "ok"
+  },
+  {
+    "id": "nacional-uruguai",
+    "match": "Nacional",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2684.png",
+    "status": "ok"
+  },
+  {
+    "id": "olimpia",
+    "match": "Club Olimpia",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2675.png",
+    "status": "ok"
+  },
+  {
+    "id": "cerro-porteno",
+    "match": "Cerro Porteño",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2671.png",
+    "status": "ok"
+  },
+  {
+    "id": "libertad",
+    "match": "Libertad",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2670.png",
+    "status": "ok"
+  },
+  {
+    "id": "colo-colo",
+    "match": "Colo Colo",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2688.png",
+    "status": "ok"
+  },
+  {
+    "id": "universidad-chile",
+    "match": "Universidad de Chile",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/4139.png",
+    "status": "ok"
+  },
+  {
+    "id": "universidad-catolica",
+    "match": "Universidad Católica",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/885.png",
+    "status": "ok"
+  },
+  {
+    "id": "atletico-nacional",
+    "match": "Atlético Nacional",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/5264.png",
+    "status": "ok"
+  },
+  {
+    "id": "millonarios",
+    "match": "Millonarios",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/5484.png",
+    "status": "ok"
+  },
+  {
+    "id": "america-cali",
+    "match": "América de Cali",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/8109.png",
+    "status": "ok"
+  },
+  {
+    "id": "junior",
+    "match": "Atlético Junior",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/4815.png",
+    "status": "ok"
+  },
+  {
+    "id": "ldu",
+    "match": "Liga de Quito",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/4816.png",
+    "status": "ok"
+  },
+  {
+    "id": "barcelona-equador",
+    "match": "Barcelona SC",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2686.png",
+    "status": "ok"
+  },
+  {
+    "id": "independiente-del-valle",
+    "match": "Independiente del Valle",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/17086.png",
+    "status": "ok"
+  },
+  {
+    "id": "alianza-lima",
+    "match": "Alianza Lima",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2680.png",
+    "status": "ok"
+  },
+  {
+    "id": "universitario",
+    "match": "Universitario",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2685.png",
+    "status": "ok"
+  },
+  {
+    "id": "sporting-cristal",
+    "match": "Sporting Cristal",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2673.png",
+    "status": "ok"
+  },
+  {
+    "id": "bolivar",
+    "match": "Bolívar",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2681.png",
+    "status": "ok"
+  },
+  {
+    "id": "strongest",
+    "match": "The Strongest",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2687.png",
+    "status": "ok"
+  },
+  {
+    "id": "caracas",
+    "match": "Caracas FC",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/4811.png",
+    "status": "ok"
+  },
+  {
+    "id": "america-mexico",
+    "match": "América",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/227.png",
+    "status": "ok"
+  },
+  {
+    "id": "chivas",
+    "match": "Guadalajara",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/219.png",
+    "status": "ok"
+  },
+  {
+    "id": "cruz-azul",
+    "match": "Cruz Azul",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/218.png",
+    "status": "ok"
+  },
+  {
+    "id": "pumas",
+    "match": "Pumas UNAM",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/233.png",
+    "status": "ok"
+  },
+  {
+    "id": "monterrey",
+    "match": "Monterrey",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/220.png",
+    "status": "ok"
+  },
+  {
+    "id": "tigres",
+    "match": "Tigres UANL",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/232.png",
+    "status": "ok"
+  },
+  {
+    "id": "inter-miami",
+    "match": "Inter Miami CF",
+    "score": 58.333333333333336,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
+    "status": "ok"
+  },
+  {
+    "id": "la-galaxy",
+    "match": "LA Galaxy",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/187.png",
+    "status": "ok"
+  },
+  {
+    "id": "lafc",
+    "match": "LAFC",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/18966.png",
+    "status": "ok"
+  },
+  {
+    "id": "orlando-city",
+    "match": "Orlando City SC",
+    "score": 59.23076923076923,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/12011.png",
+    "status": "ok"
+  },
+  {
+    "id": "seattle-sounders",
+    "match": "Seattle Sounders FC",
+    "score": 61.76470588235294,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/9726.png",
+    "status": "ok"
+  },
+  {
+    "id": "atlanta-united",
+    "match": "Atlanta United FC",
+    "score": 60.66666666666667,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png",
+    "status": "ok"
+  },
+  {
+    "id": "toronto-fc",
+    "match": "Toronto FC",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png",
+    "status": "ok"
+  },
+  {
+    "id": "vancouver-whitecaps",
+    "match": "Vancouver Whitecaps",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/9727.png",
+    "status": "ok"
+  },
+  {
+    "id": "al-nassr",
+    "match": "Al Nassr",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/817.png",
+    "status": "ok"
+  },
+  {
+    "id": "al-hilal",
+    "match": "Al Hilal",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/929.png",
+    "status": "ok"
+  },
+  {
+    "id": "al-ittihad",
+    "match": "Al Ittihad",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2276.png",
+    "status": "ok"
+  },
+  {
+    "id": "al-ahli-saudi",
+    "match": "Al Ahli",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/8346.png",
+    "status": "ok"
+  },
+  {
+    "id": "al-ahly",
+    "match": "Al Ahly",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/10207.png",
+    "status": "ok"
+  },
+  {
+    "id": "mamelodi-sundowns",
+    "match": "Mamelodi Sundowns",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/7084.png",
+    "status": "ok"
+  },
+  {
+    "id": "orlando-pirates",
+    "match": "Orlando Pirates",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/7085.png",
+    "status": "ok"
+  },
+  {
+    "id": "kaizer-chiefs",
+    "match": "Kaizer Chiefs",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/7081.png",
+    "status": "ok"
+  },
+  {
+    "id": "galatasaray",
+    "match": "Galatasaray",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png",
+    "status": "ok"
+  },
+  {
+    "id": "fenerbahce",
+    "match": "Fenerbahce",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/436.png",
+    "status": "ok"
+  },
+  {
+    "id": "besiktas",
+    "match": "Besiktas",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/1895.png",
+    "status": "ok"
+  },
+  {
+    "id": "trabzonspor",
+    "match": "Trabzonspor",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/997.png",
+    "status": "ok"
+  },
+  {
+    "id": "club-brugge",
+    "match": "Club Brugge",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/570.png",
+    "status": "ok"
+  },
+  {
+    "id": "anderlecht",
+    "match": "Anderlecht",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/441.png",
+    "status": "ok"
+  },
+  {
+    "id": "genk",
+    "match": "Racing Genk",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/938.png",
+    "status": "ok"
+  },
+  {
+    "id": "bodo-glimt",
+    "match": "Bodo/Glimt",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2980.png",
+    "status": "ok"
+  },
+  {
+    "id": "rosenborg",
+    "match": "Rosenborg",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/438.png",
+    "status": "ok"
+  },
+  {
+    "id": "molde",
+    "match": "Molde",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2715.png",
+    "status": "ok"
+  },
+  {
+    "id": "olympiacos",
+    "match": "Olympiacos",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/435.png",
+    "status": "ok"
+  },
+  {
+    "id": "panathinaikos",
+    "match": "Panathinaikos",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/443.png",
+    "status": "ok"
+  },
+  {
+    "id": "aek-athens",
+    "match": "AEK Athens",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/887.png",
+    "status": "ok"
+  },
+  {
+    "id": "wydad-casablanca",
+    "match": "Wydad AC",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/8625.png",
+    "status": "ok"
+  },
+  {
+    "id": "esperance",
+    "match": "Esperance Sportive de Tunis",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/8377.png",
+    "status": "ok"
+  },
+  {
+    "id": "urawa-reds",
+    "match": "Urawa Red Diamonds",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3385.png",
+    "status": "ok"
+  },
+  {
+    "id": "yokohama-marinos",
+    "match": "Yokohama F. Marinos",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/7116.png",
+    "status": "ok"
+  },
+  {
+    "id": "ulsan-hd",
+    "match": "Ulsan HD",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/7120.png",
+    "status": "ok"
+  },
+  {
+    "id": "melbourne-victory",
+    "match": "Melbourne Victory",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/5328.png",
+    "status": "ok"
+  },
+  {
+    "id": "sydney-fc",
+    "match": "Sydney FC",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/5327.png",
+    "status": "ok"
+  },
+  {
+    "id": "copenhagen",
+    "match": "F.C. København",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/909.png",
+    "status": "ok"
+  },
+  {
+    "id": "brondby",
+    "match": "Brøndby IF",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/575.png",
+    "status": "ok"
+  },
+  {
+    "id": "rapid-vienna",
+    "match": "Rapid Vienna",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/519.png",
+    "status": "ok"
+  },
+  {
+    "id": "salzburg",
+    "match": "RB Salzburg",
+    "score": 56,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2790.png",
+    "status": "ok"
+  },
+  {
+    "id": "basel",
+    "match": "FC Basel",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/989.png",
+    "status": "ok"
+  },
+  {
+    "id": "young-boys",
+    "match": "Young Boys",
+    "score": 100,
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2722.png",
+    "status": "ok"
+  },
+  {
+    "id": "zamalek",
+    "page": "https://en.wikipedia.org/wiki/Zamalek_SC",
+    "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ef/Zamalek_SC_logo.svg/250px-Zamalek_SC_logo.svg.png",
+    "status": "ok",
+    "source": "Wikimedia",
+    "license": "Escudo do respectivo clube, conforme página de origem"
+  },
+  {
+    "id": "raja-casablanca",
+    "page": "https://en.wikipedia.org/wiki/Raja_CA",
+    "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/bd/Raja_CA_logo.png/250px-Raja_CA_logo.png",
+    "status": "ok",
+    "source": "Wikimedia",
+    "license": "Escudo do respectivo clube, conforme página de origem"
+  },
+  {
+    "id": "jeonbuk",
+    "page": "https://en.wikipedia.org/wiki/Jeonbuk_Hyundai_Motors",
+    "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/23/Jeonbuk_Hyundai_Motors.svg/250px-Jeonbuk_Hyundai_Motors.svg.png",
+    "status": "ok",
+    "source": "Wikimedia",
+    "license": "Escudo do respectivo clube, conforme página de origem"
+  },
+  {
+    "id": "club-africain",
+    "page": "https://commons.wikimedia.org/wiki/File:Logo_Club_Africain_officiel.png",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Logo_Club_Africain_officiel.png/500px-Logo_Club_Africain_officiel.png",
+    "status": "ok",
+    "source": "Wikimedia",
+    "license": "CC BY 4.0 — clubafricain.com; sem alterações"
+  },
+  {
+    "id": "cerro-largo",
+    "match": "Cerro Largo FC",
+    "url": "https://sudamericanos20.auf.org.uy/imagenes/img_contenido/club_club/a/cerrolargo.png",
+    "page": "https://sudamericanos20.auf.org.uy/cerro-largo-futbol-club/",
+    "source": "AUF",
+    "status": "ok",
+    "license": "Escudo do respectivo clube; sem alterações."
+  },
+  {
+    "id": "montevideo-city-torque",
+    "match": "Montevideo City Torque",
+    "url": "https://montevideocitytorque.com/wp-content/uploads/2020/01/escudo-1.png",
+    "page": "https://montevideocitytorque.com/escudo/",
+    "source": "Site oficial do clube",
+    "status": "ok",
+    "license": "Escudo do respectivo clube; sem alterações."
+  },
+  {
+    "id": "oriente-petrolero",
+    "match": "Oriente Petrolero",
+    "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2682.png",
+    "page": "https://www.orientepetrolero.com.bo/",
+    "source": "ESPN, identidade confirmada no site oficial",
+    "status": "ok",
+    "license": "Escudo do respectivo clube; sem alterações."
+  },
+  {
+    "id": "xv-piracicaba",
+    "match": "XV de Piracicaba",
+    "url": "https://xvpiracicaba.com.br/",
+    "source": "SVG do cabeçalho do site oficial do clube, rasterizado a 512px",
+    "status": "ok",
+    "license": "Escudo do respectivo clube; sem alterações."
+  },
+  {
+    "club": "Petrolina",
+    "id": "petrolina",
+    "source": "https://www.petrolinafc.com.br/static/img/clube/logo.webp?v=7e48ca877475",
+    "page": "https://www.petrolinafc.com.br/",
+    "retrieved_at": "2026-11-01T14:48:17.324176+00:00",
+    "file": "petrolina.webp",
+    "processing": "Official crest, resize only"
+  },
+  {
+    "club": "Luverdense",
+    "id": "luverdense",
+    "source": "https://luverdense.com.br/wp-content/uploads/2024/10/escudo-luverdnse-1024x1024.png",
+    "page": "https://luverdense.com.br/",
+    "retrieved_at": "2026-11-01T14:48:17.324176+00:00",
+    "file": "luverdense.webp",
+    "processing": "Official crest, resize only"
+  },
+  {
+    "club": "America-RJ",
+    "id": "america-rj",
+    "source": "https://americario.com.br/wp-content/uploads/2024/02/america-2020.svg",
+    "page": "https://americario.com.br/links/",
+    "retrieved_at": "2026-11-01T14:48:17.324176+00:00",
+    "file": "america-rj.svg",
+    "processing": "Official SVG preserved"
+  },
+  {
+    "club": "Portuguesa Santista",
+    "id": "portuguesa-santista",
+    "source": "https://www.portuguesasantista.com.br/wp-content/uploads/2017/01/portuguesa-santista-logo-header-site.png",
+    "page": "https://www.portuguesasantista.com.br/o-clube/estadio-ulrico-mursa/",
+    "retrieved_at": "2026-11-01T14:48:17.324176+00:00",
+    "file": "portuguesa-santista.webp",
+    "processing": "Official crest resized to 128px; Portuguesa crest extracted from official header"
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "versions": [
+    {
+      "version": 3,
+      "name": "Visual anterior aprovado · terreno verde",
+      "date": "2026-10-24",
+      "savedAt": "2026-10-24T18:24:19.541880+00:00",
+      "sha256": "0d278d85a61fd87ad4e8098a2bf83b87bf7b9920ad4d48fd3d758b68dbc1df16",
+      "url": "/laboratorio-mundo/?v=3",
+      "snapshot": "/laboratorio-mundo/versoes/v3/",
+      "sourceBackup": ".sites-runtime\\mundo-versionado\\v3\\source"
+    },
+    {
+      "version": 4,
+      "name": "Rodada de biomas · descartada",
+      "date": "2026-10-24",
+      "savedAt": "2026-10-24T18:24:19.541880+00:00",
+      "sha256": "65bbb2d4a9773088f8ee1783f91d092b5c0ca87aae77f111c5894496c852140e",
+      "url": "/laboratorio-mundo/?v=4",
+      "snapshot": "/laboratorio-mundo/versoes/v4/",
+      "sourceBackup": ".sites-runtime\\mundo-versionado\\v4\\source"
+    },
+    {
+      "version": 5,
+      "name": "Retorno ao visual aprovado · dois escudos pequenos",
+      "date": "2026-10-24",
+      "savedAt": "2026-10-24T18:26:08.035109+00:00",
+      "sha256": "244677952be84973a897cad1a856a90b7e49c838b3b4a283bd46d134b42d24a2",
+      "url": "/laboratorio-mundo/?v=5",
+      "snapshot": "/laboratorio-mundo/versoes/v5/",
+      "sourceBackup": ".sites-runtime\\mundo-versionado\\v5\\source"
+    },
+    {
+      "version": 6,
+      "name": "Retorno ao visual anterior · dois escudos completos",
+      "date": "2026-10-24",
+      "savedAt": "2026-10-24T18:28:46.953097+00:00",
+      "sha256": "b5f910aae2b91f8406aabaaa4b67a8d8d060e31f7c57600421ee03b8a55ed83d",
+      "url": "/laboratorio-mundo/?v=6",
+      "snapshot": "/laboratorio-mundo/versoes/v6/",
+      "sourceBackup": ".sites-runtime\\mundo-versionado\\v6\\source"
+    },
+    {
+      "version": 7,
+      "name": "Escudos centralizados acima dos estádios",
+      "date": "2026-10-24",
+      "savedAt": "2026-10-24T19:00:44.915858+00:00",
+      "sha256": "d9f276226769f8de41ae1258814341bbcedb0b5f1c10fa8d5c0fbc811250d89c",
+      "url": "/laboratorio-mundo/?v=7",
+      "snapshot": "/laboratorio-mundo/versoes/v7/",
+      "sourceBackup": ".sites-runtime\\mundo-versionado\\v7\\source"
+    },
+    {
+      "version": 8,
+      "name": "Eleição em destaque · abertura próxima no Brasil",
+      "date": "2026-10-24",
+      "savedAt": "2026-10-24T19:09:37.096110+00:00",
+      "sha256": "60265b0af5dc5020aab6639d30d73790b2833715ab39edbe190bd89d42ab21d7",
+      "url": "/laboratorio-mundo/?v=8",
+      "snapshot": "/laboratorio-mundo/versoes/v8/",
+      "sourceBackup": ".sites-runtime\\mundo-versionado\\v8\\source"
+    }
+  ],
+  "current": 8
+}

@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Painel · Arena das Torcidas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@600;700;800&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="estilo.css">
+<link rel="stylesheet" href="refino.css">
+<link rel="stylesheet" href="claro.css">
+<style>
+body{overflow:auto}
+.adm{max-width:1000px;margin:0 auto;display:grid;gap:18px;padding-block:20px 60px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.adm h1{font-family:var(--display);font-size:34px;margin:0;text-transform:uppercase}
+.adm h1 span{color:var(--flood)}
+label{display:grid;gap:6px;font-size:13px;color:var(--muted)}
+textarea.field{min-height:180px;resize:vertical;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:1.5}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:end}
+.row>label{flex:1 1 180px}
+.msg{font-size:14px;padding:10px 12px;border-radius:8px;background:var(--panel-2)}
+.msg.err{background:rgba(255,93,93,.15);color:#ffd0d0}
+.msg.ok{background:rgba(111,220,155,.15);color:#c9f5d9}
+.st{font-size:12px;border-radius:99px;padding:2px 8px;white-space:nowrap}
+.st.novo{background:rgba(111,220,155,.18);color:#c9f5d9}
+.st.dia{background:rgba(255,207,74,.18);color:#ffe9a8}
+.st.rep,.st.outro{background:var(--panel-2);color:var(--muted)}
+.st.erro{background:rgba(255,93,93,.18);color:#ffd0d0}
+td input.field{min-width:220px}
+.small{font-size:12.5px;color:var(--muted);line-height:1.5;margin:0}
+.small code{color:var(--chalk)}
+</style>
+</head>
+<body>
+<main class="adm">
+  <h1>Arena das <span>Torcidas</span></h1><p class="small">Painel de administração · <a href="index.html">Voltar ao mapa</a></p>
+  <div id="cfg-msg" class="msg err" hidden>O Supabase ainda não está configurado. Preencha <b>config.js</b> com a Project URL e a chave anon public e envie o site de novo.</div>
+
+  <section class="card" id="login-card">
+    <h3>Entrar</h3>
+    <form id="login" class="row">
+      <label for="em">E-mail<input class="field" id="em" type="email" autocomplete="username" required></label>
+      <label for="pw">Senha<input class="field" id="pw" type="password" autocomplete="current-password" required></label>
+      <button class="btn" type="submit">Entrar</button>
+    </form>
+    <div id="login-msg" class="msg err" hidden></div>
+  </section>
+
+  <div id="panel" hidden style="display:grid;gap:18px">
+    <section class="card"><h3>Itens do estádio · escolha do presidente</h3><p class="small">Registre aqui a escolha confirmada pelo presidente. As peças são visuais, ficam apenas nesta temporada e não concedem cadeiras. Uma escolha desde o Campinho, mais uma por nível completo: 1, 2, 3, 4 e 5 escolhas no total. Escolhas anteriores ficam pendentes até haver presidente; confirme a identidade pelo Instagram antes de registrar. Nenhuma peça entra automaticamente.</p><label>Clube<select class="field" id="equipment-team"></select></label><p id="equipment-status" class="msg" role="status"></p><label>Escolha pendente<select class="field" id="equipment-level"></select></label><label>Melhoria<select class="field" id="equipment-item"></select></label><div id="equipment-checks" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin:14px 0"></div><button class="btn" id="equipment-save" type="button">Registrar escolha confirmada</button> <a id="equipment-preview" target="_blank" rel="noopener">Ver prévia</a><div id="equipment-msg" role="status"></div></section>
+    <section class="card" id="season-admin"><h3>Temporadas e premiações</h3><p class="small">Abrir uma temporada inicia uma nova disputa, sem apagar as contas nem o histórico. Os registros anteriores ao lançamento ficam separados como testes.</p><div id="season-admin-summary" class="msg"></div><div class="row"><label>Temporada<select class="field" id="season-select"></select></label><button type="button" class="btn ghost" id="season-start">Preparar abertura</button></div><div class="row"><label>Encerramento às 00h de Brasília<input class="field" type="date" id="season-end-day"></label><button type="button" class="btn ghost" id="season-announce">Anunciar encerramento</button><button type="button" class="btn ghost" id="season-close">Preparar fechamento e prêmios</button></div><p class="small">A data escolhida é a virada que encerra a disputa. Exige 14 dias completos de aviso e não pode ser antecipada. Antes do fechamento, apure as curtidas de todos os dias com participação.</p><div id="season-confirm" hidden><p id="season-confirm-text"></p><label>Digite a frase de confirmação<input class="field" id="season-confirm-input" autocomplete="off"></label><div class="row"><button type="button" class="btn" id="season-confirm-yes">Confirmar</button><button type="button" class="btn ghost" id="season-confirm-no">Cancelar</button></div></div><div id="season-admin-msg" role="status"></div></section>
+    <section class="card">
+      <div class="row" style="justify-content:space-between"><h3>Registrar comentários</h3><button class="btn ghost" type="button" id="logout">Sair</button></div>
+      <p class="small">Cole um comentário por linha, no formato <code>@usuario Grêmio</code>. Para confirmar uma indicação, use <code>@usuario Inter vim pelo @amigo</code>. Só marcar alguém não dá bônus. Linhas copiadas do Instagram com o nome numa linha e o texto na de baixo também funcionam.</p>
+      <div class="row">
+        <label for="dia" style="flex:0 0 180px">Dia do comentário<input class="field" id="dia" type="date"></label>
+      </div>
+      <label for="txt">Comentários<textarea class="field" id="txt" placeholder="@joao.silva Grêmio&#10;@maria_lima Flamengo vim pelo @bruno.rocha&#10;@pedro99 vamo timão"></textarea></label>
+      <div class="row"><button class="btn ghost" type="button" id="prev">Conferir</button><button class="btn" type="button" id="save" disabled>Confirmar e salvar</button></div>
+      <div id="prev-out"></div>
+    </section>
+
+<section class="card"><h3>Apurar curtidas do dia</h3><p class="small">Conferência manual do piloto. Informe o primeiro comentário válido de cada conta, com curtidas e horário original de Brasília. Formato: <code>@usuario 42 14:30:00</code>. O horário de cadastro no painel não serve para desempate. Use segundos quando disponíveis.</p><label>Dia encerrado<input class="field" id="likes-day" type="date"></label><label>Contagens conferidas<textarea class="field" id="likes-input" placeholder="@joao 42 14:30:00&#10;@maria 38 15:12:25"></textarea></label><div class="row"><button class="btn ghost" id="likes-record" type="button">Salvar contagens</button><button class="btn ghost" id="likes-preview" type="button">Conferir pódio</button></div><div id="likes-result"></div><div id="likes-confirm" hidden><p>Ao encerrar, o resultado fica definitivo. Verifique as contagens de todos os participantes antes.</p><button type="button" class="btn" id="likes-close">Confirmar e encerrar este dia</button></div><div id="likes-msg"></div></section>
+    <section class="card">
+      <h3>Corrigir um torcedor</h3>
+      <div class="row">
+        <label for="fix-h">@ do torcedor<input class="field" id="fix-h" placeholder="@usuario"></label>
+        <label for="fix-t">Mudar pro time<select class="field" id="fix-t"></select></label>
+        <button class="btn ghost" type="button" id="fix-move">Mudar de time</button>
+        <button class="btn ghost" type="button" id="fix-del">Remover do jogo</button>
+      </div>
+      <div id="fix-confirm" class="row" hidden><span class="small" id="fix-confirm-txt"></span><button class="btn" type="button" id="fix-yes">Sim, remover</button><button class="btn ghost" type="button" id="fix-no">Cancelar</button></div>
+      <div id="fix-msg"></div>
+    </section>
+
+    <section class="card">
+      <h3>Configurações</h3><p class="small">As metas do estádio e o limite de inatividade são guardados na abertura de cada temporada. Ajuste antes de abrir a próxima disputa.</p><div><p class="small">Metas de cadeiras de toda a torcida. Nível inicial sempre 0; demais metas em ordem crescente.</p><div class="row" id="level-settings"><label>Campinho<input class="field" type="number" id="lv-0" value="0" disabled></label><label>Arquibancada<input class="field" type="number" min="1" id="lv-1" value="25"></label><label>Estádio<input class="field" type="number" min="2" id="lv-2" value="200"></label><label>Arena<input class="field" type="number" min="3" id="lv-3" value="1000"></label><label>Mega arena<input class="field" type="number" min="4" id="lv-4" value="5000"></label><button type="button" class="btn ghost" id="levels-save">Salvar metas</button></div><div id="levels-msg"></div></div>
+      <div class="row">
+        <label for="inat" style="flex:0 0 260px">Dias sem comentar até perder o cargo
+          <select class="field" id="inat"><option value="3">3 dias</option><option value="5">5 dias</option><option value="7">7 dias</option><option value="10">10 dias</option></select></label>
+        <button class="btn ghost" type="button" id="inat-save">Salvar</button>
+      </div>
+      <div id="inat-msg"></div>
+    </section>
+
+    <section class="card">
+      <h3>Times e escudos</h3>
+      <p class="small">Cole o link de uma imagem (PNG ou SVG) no campo do escudo e salve. Apelidos ajudam o painel a reconhecer o time nos comentários: separe por vírgula.</p>
+      <div class="tablewrap"><table><thead><tr><th>Time</th><th>Link do escudo</th><th>Apelidos</th><th></th></tr></thead><tbody id="teams-body"></tbody></table></div>
+      <details><summary class="small" style="cursor:pointer">Adicionar time</summary>
+        <form id="new-team" class="row" style="margin-top:10px">
+          <label for="nt-id">Código (sem espaço)<input class="field" id="nt-id" required placeholder="ex.: ceara"></label>
+          <label for="nt-name">Nome<input class="field" id="nt-name" required></label>
+          <label for="nt-short">Sigla<input class="field" id="nt-short" maxlength="5"></label>
+          <label for="nt-city">Cidade<input class="field" id="nt-city" required></label>
+          <label for="nt-uf">Estado ou país<input class="field" id="nt-uf" required placeholder="RS, SP, ESP, ING"></label>
+          <label for="nt-country">País (BR, ES, GB…)<input class="field" id="nt-country" value="BR" required></label>
+          <label for="nt-lat">Latitude<input class="field" id="nt-lat" required inputmode="decimal" placeholder="-30.05"></label>
+          <label for="nt-lon">Longitude<input class="field" id="nt-lon" required inputmode="decimal" placeholder="-51.17"></label>
+          <label for="nt-c1">Cor 1<input class="field" id="nt-c1" type="color" value="#1a8fd6"></label>
+          <label for="nt-c2">Cor 2<input class="field" id="nt-c2" type="color" value="#111111"></label>
+          <button class="btn" type="submit">Adicionar</button>
+        </form>
+        <p class="small">Latitude e longitude: no Google Maps, clique com o botão direito no estádio e copie os números.</p>
+      </details>
+      <div id="team-msg"></div>
+    </section>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="config.js"></script>
+<script src="teams-seed.js"></script>
+<script src="crest-map.js"></script>
+<script src="core.js"></script>
+<script src="stadium-items.js"></script>
+<script>
+(async function(){
+  const G=window.GAME, sb=G.sb, $=id=>document.getElementById(id);
+  const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const say=(id,txt,kind)=>{$(id).innerHTML=txt?`<div class="msg ${kind||""}">${txt}</div>`:""};
+  $("dia").value=G.todayBR();
+  if(G.DEMO){$("cfg-msg").hidden=false;$("login-card").hidden=true;return}
+
+  let teams=[], fans={},seasons=[],equipmentState={},governance={roles:[],choices:[]};
+  function renderEquipment(){
+    const season=seasons.find(s=>s.status==='active'),team=$('equipment-team').value;
+    const ids=equipmentState[String(season?.id)]?.[team]||[],choices=(governance.choices||[]).filter(c=>c.team_id===team),pending=choices.filter(c=>!c.item_id),president=season?.roles_released&&(governance.roles||[]).find(r=>r.team_id===team&&r.position===1);
+    $('equipment-status').textContent=pending.length+' escolha(s) pendente(s). '+(president?'Presidente atual: @'+president.handle+'.':'Aguardando o primeiro presidente; escolhas guardadas.');
+    $('equipment-level').innerHTML=pending.map(c=>'<option value="'+c.level+'">'+['','Campinho','Arquibancada','Estádio','Arena','Mega Arena'][c.level]+'</option>').join('');
+    const available=['training-ground','banner','smoke','screen','president-box','club-shop','trophy-room','statue'],minLevel={'training-ground':1,banner:1,smoke:1,screen:1,'president-box':1,'club-shop':1,'trophy-room':4,statue:4},clubLevel=choices.reduce((n,c)=>Math.max(n,c.level),1);
+    $('equipment-item').innerHTML=window.ARENA_ITEMS.catalog.filter(i=>available.includes(i.id)&&clubLevel>=minLevel[i.id]&&!ids.includes(i.id)).map(i=>'<option value="'+i.id+'">'+esc(i.name)+'</option>').join('');
+    $('equipment-checks').textContent=ids.length?'Instalados: '+ids.map(id=>window.ARENA_ITEMS.catalog.find(i=>i.id===id)?.name||id).join(', '):'Nenhum item escolhido. O bairro básico não consome escolhas.';
+    $('equipment-save').disabled=!season||!president||!pending.length||!$('equipment-item').value;
+    $('equipment-preview').href='/laboratorio-arte/?'+new URLSearchParams({preview:team,nivel:'3',itens:ids.join(',')});
+  }
+  $('equipment-team').onchange=renderEquipment;
+  $('equipment-save').onclick=async()=>{
+    const team=$('equipment-team').value,president=(governance.roles||[]).find(r=>r.team_id===team&&r.position===1);
+    if(!president)return;$('equipment-save').disabled=true;
+    try{const result=await sb.rpc('record_stadium_choice',{p_team:team,p_level:Number($('equipment-level').value),p_president:president.handle,p_item:$('equipment-item').value});if(result.error)throw result.error;await loadAll();say('equipment-msg','Escolha registrada. O mapa atualiza em até um minuto.','ok');}
+    catch(e){say('equipment-msg','Não salvou: '+esc(e.message),'err');}finally{renderEquipment();}
+  };
+  async function loadAll(){
+    const {data:t,error:e1}=await sb.from("teams").select("*").order("name"); if(e1)throw e1; teams=t.map(team=>({...team,crest_url:team.crest_url||(window.CRESTS||{})[team.id]||null}));
+    const seasonRows=await sb.from("seasons").select("*").order("number");if(seasonRows.error)throw seasonRows.error;seasons=seasonRows.data;renderAdminSeasons();
+    const active=seasons.find(s=>s.status==='active');
+    const gov=await sb.rpc('public_season_governance');if(gov.error)throw gov.error;governance=gov.data;const selectedTeam=$('equipment-team').value;
+    const equipment=await sb.from('settings').select('value').eq('key','stadium_equipment').maybeSingle();if(equipment.error)throw equipment.error;equipmentState=equipment.data?.value||{};$('equipment-team').innerHTML=teams.map(t=>'<option value="'+esc(t.id)+'">'+esc(t.name)+'</option>').join('');if(selectedTeam)$('equipment-team').value=selectedTeam;renderEquipment();
+    fans={}; let from=0;
+    for(;active;){const {data,error}=await sb.from("season_fans").select("handle,team_id").eq("season_id",active.id).range(from,from+999); if(error)throw error; data.forEach(f=>fans[f.handle]=f.team_id); if(data.length<1000)break; from+=1000}
+    renderTeams(); $("fix-t").innerHTML=teams.map(t=>`<option value="${esc(t.id)}">${esc(t.name)}</option>`).join("");
+    const {data:s}=await sb.from("settings").select("value").eq("key","inatividade_dias").maybeSingle(); if(s)$("inat").value=String(s.value);
+    const {data:levels,error:levelsError}=await sb.from("settings").select("value").eq("key","niveis_estadio").maybeSingle(); if(levelsError)throw levelsError; if(levels&&Array.isArray(levels.value))levels.value.forEach((v,i)=>{$("lv-"+i).value=v;});
+  }
+
+  let seasonAction=null,seasonBusy=false;
+  function selectedSeason(){return seasons.find(s=>s.number===Number($('season-select').value));}
+  function renderAdminSeasons(){
+    const chosen=$('season-select').value;
+    $('season-select').innerHTML=seasons.filter(s=>!s.is_pilot).map(s=>'<option value="'+s.number+'">'+esc(s.name)+' · '+({draft:'em preparação',active:'aberta',closed:'encerrada'})[s.status]+'</option>').join('');
+    const initial=seasons.find(s=>!s.is_pilot&&s.status==='active')||seasons.find(s=>!s.is_pilot&&s.status==='draft');
+    if(chosen&&seasons.some(s=>!s.is_pilot&&s.number===Number(chosen)))$('season-select').value=chosen;else if(initial)$('season-select').value=String(initial.number);
+    updateSeasonControls();
+  }
+  function updateSeasonControls(){const s=selectedSeason();if(!s)return;
+    $('season-admin-summary').textContent=s.name+' · '+(s.status==='active'?'Aberta desde '+s.starts_on.split('-').reverse().join('/'):s.status==='draft'?'Em preparação. Nenhuma abertura agendada.':'Encerrada. Resultados e conquistas arquivados.')+(s.ends_at?' · Fim anunciado: '+new Date(s.ends_at).toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo'}):'');
+    $('season-start').disabled=s.status!=='draft';$('season-announce').disabled=s.status!=='active';$('season-close').disabled=s.status!=='active';
+    $('season-end-day').min=new Date(Date.parse(G.todayBR()+'T12:00:00Z')+15*86400000).toISOString().slice(0,10);
+    $('season-confirm').hidden=true;seasonAction=null;
+  }
+  $('season-select').onchange=updateSeasonControls;
+  function prepareSeasonAction(kind){const s=selectedSeason();if(!s)return;seasonAction={kind,number:s.number,phrase:(kind==='start'?'INICIAR':'ENCERRAR')+' TEMPORADA '+s.number};$('season-confirm-text').textContent=(kind==='start'?'Isso abre uma disputa com cadeiras, cargos e Torcedor nº 1 do zero. Os testes e conquistas anteriores permanecem arquivados. ':'Isso guarda o resultado final e concede estrelas e emblemas. A próxima temporada ficará em preparação. ')+ 'Para confirmar, digite: '+seasonAction.phrase;$('season-confirm-input').value='';$('season-confirm').hidden=false;}
+  $('season-start').onclick=()=>prepareSeasonAction('start');$('season-close').onclick=()=>prepareSeasonAction('close');
+  $('season-confirm-no').onclick=()=>{$('season-confirm').hidden=true;seasonAction=null;};
+  $('season-confirm-yes').onclick=async()=>{if(!seasonAction||seasonBusy)return;if($('season-confirm-input').value.trim()!==seasonAction.phrase)return say('season-admin-msg','Digite a frase exatamente como indicada.','err');seasonBusy=true;$('season-confirm-yes').disabled=true;try{const {error}=await sb.rpc(seasonAction.kind==='start'?'start_season':'close_season',{p_number:seasonAction.number});if(error)throw error;await loadAll();$('season-confirm').hidden=true;seasonAction=null;say('season-admin-msg','Operação concluída. Atualize o mapa para ver a nova fase.','ok');}catch(e){say('season-admin-msg',esc(e.message),'err');}finally{seasonBusy=false;$('season-confirm-yes').disabled=false;}};
+  $('season-announce').onclick=async()=>{if(seasonBusy)return;const s=selectedSeason(),day=$('season-end-day').value;if(!day||!s)return say('season-admin-msg','Escolha a data de encerramento.','err');seasonBusy=true;try{const {error}=await sb.rpc('announce_season_end',{p_number:s.number,p_end_day:day});if(error)throw error;await loadAll();say('season-admin-msg','Encerramento anunciado. O selo do mapa mostrará a contagem regressiva.','ok');}catch(e){say('season-admin-msg',esc(e.message),'err');}finally{seasonBusy=false;}};
+
+  async function enter(){
+    const {data:{session}}=await sb.auth.getSession(); if(!session)return;
+    const {data:adm}=await sb.from("admins").select("email").maybeSingle();
+    if(!adm){$("login-msg").hidden=false;$("login-msg").textContent="Seu e-mail ainda não tem acesso de administrador. Entre com a conta autorizada para o jogo.";return}
+    $("login-card").hidden=true;$("panel").hidden=false;
+    try{await loadAll()}catch(e){say("prev-out","Erro ao carregar: "+esc(e.message),"err")}
+  }
+  $("login").addEventListener("submit",async e=>{e.preventDefault();$("login-msg").hidden=true;
+    const {error}=await sb.auth.signInWithPassword({email:$("em").value.trim(),password:$("pw").value});
+    if(error){$("login-msg").hidden=false;$("login-msg").textContent="Não entrou: confere o e-mail e a senha.";return} enter()});
+  $("logout").onclick=async()=>{await sb.auth.signOut();location.reload()};
+
+  /* ---------- reconhecer time no texto ---------- */
+  const norm=s=>s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9@._ -]/g," ").replace(/\s+/g," ").trim();
+  function teamIn(text){
+    const tx=' '+norm(text.replace(/@[\w.]+/g,' '))+' ';let best=[],len=0;
+    teams.filter(t=>t.active!==false).forEach(t=>[t.name,t.short,t.id.replace(/-/g,' '),...(t.aliases||[])].filter(Boolean).forEach(a=>{const n=norm(a);if(n.length<2||!tx.includes(' '+n+' '))return;if(n.length>len){best=[t];len=n.length;}else if(n.length===len&&!best.some(x=>x.id===t.id))best.push(t);}));
+    return best.length===1?best[0]:null;
+  }
+  const NOISE=/^(responder|reply|curtir|like|ver tradu[cç][aã]o|see translation|\d+\s*(h|min|d|sem|w|s)|\d+\s*curtidas?|\d+\s*likes?|verificado|verified|autor|editado)$/i;
+  function parse(txt){
+    let lines=txt.split(/\n/).map(l=>l.trim()).filter(l=>l&&!NOISE.test(l));
+    const out=[];
+    for(let i=0;i<lines.length;i++){
+      let l=lines[i];
+      if(/^@?[\w.]{2,30}$/.test(l)&&lines[i+1]&&(!/^@?[\w.]{2,30}$/.test(lines[i+1])||(!l.startsWith("@")&&teamIn(lines[i+1]))||l.startsWith("@")&&!lines[i+1].startsWith("@"))){l=(l.startsWith("@")?l:"@"+l)+" "+lines[i+1];i++}
+      const ats=[...l.matchAll(/@([\w.]{1,30})/g)].map(m=>m[1].toLowerCase().replace(/\.$/,""));
+      let handle=ats[0]; if(!handle){const m=l.match(/^([\w.]{2,30})\s/);handle=m&&m[1].toLowerCase()}
+      if(!handle)continue;
+      const ref=(l.match(/vim\s+pel[oa]\s+@([\w.]{1,30})/i)||[])[1]?.toLowerCase()||null;
+      out.push({handle,team:teamIn(l.replace(/@[\w.]+/g," ")),ref,line:l});
+    }
+    return out;
+  }
+  let plan=[], plannedDay=null;
+  function invalidatePreview(){plan=[];plannedDay=null;$("save").disabled=true;$("prev-out").textContent="Confira novamente os comentários antes de salvar.";}
+  $("txt").addEventListener("input",invalidatePreview);
+  $("dia").addEventListener("input",invalidatePreview);
+  $("dia").max=G.todayBR();
+  $("prev").onclick=()=>{
+    const day=$("dia").value; if(!day || day>G.todayBR()){say("prev-out","Escolha a data do comentário, até hoje.","err");return} plannedDay=day;
+    const seen={}, newFans={}; plan=[];
+    parse($("txt").value).forEach(p=>{
+      if(seen[p.handle]){plan.push({...p,st:"rep",txt:"repetido nesta lista"});return} seen[p.handle]=1;
+      const cur=fans[p.handle];
+      if(cur){const t=teams.find(x=>x.id===cur);
+        plan.push({...p,team:t,st:p.team&&p.team.id!==cur?"outro":"dia",txt:p.team&&p.team.id!==cur?`já é torcedor do ${t?t.name:cur}; o dia conta pra esse time`:"+1 dia (se ainda não contou hoje)"});return}
+      if(!p.team){plan.push({...p,st:"erro",txt:"time não reconhecido ou ambíguo: use o nome completo"});return}
+      const ref=p.ref&&(fans[p.ref]||newFans[p.ref])?p.ref:null;
+      newFans[p.handle]=p.team.id;
+      plan.push({...p,ref,st:"novo",txt:"novo torcedor"+(ref?` indicado por @${ref}`:"")});
+    });
+    $("save").disabled=!plan.some(p=>p.st==="novo"||p.st==="dia"||p.st==="outro");
+    $("prev-out").innerHTML=plan.length?`<div class="tablewrap"><table><thead><tr><th>@</th><th>Time</th><th>O que acontece</th></tr></thead><tbody>${plan.map(p=>`<tr><td>@${esc(p.handle)}</td><td>${p.team?esc(p.team.name):"?"}</td><td><span class="st ${p.st}">${esc(p.txt)}</span></td></tr>`).join("")}</tbody></table></div>`:'<div class="msg">Nenhum comentário encontrado no texto.</div>';
+  };
+  $("save").onclick=async()=>{
+    const day=$("dia").value; if(!plan.length || plannedDay!==day){invalidatePreview();return;} $("save").disabled=true;
+    try{
+      const entries=plan.filter(p=>['novo','dia','outro'].includes(p.st)).map(p=>({handle:p.handle,team_id:p.team.id,referred_by:p.st==='novo'?p.ref:null}));
+      const {data,error}=await sb.rpc('register_comments',{p_day:day,p_rows:entries});if(error)throw error;
+      await loadAll();
+      say('prev-out','Salvo: '+data.new_fans+' novos torcedores, '+data.new_comments+' participações válidas e '+data.duplicates+' repetições ignoradas.','ok');
+      $("txt").value=""; plan=[];
+    }catch(e){say("prev-out","Não salvou: "+esc(e.message),"err");$("save").disabled=false}
+  };
+
+  /* ---------- correções ---------- */
+  const fixH=()=>$("fix-h").value.trim().replace(/^@/,"").toLowerCase();
+
+  const yesterday=new Date(Date.parse(G.todayBR()+'T12:00:00Z')-86400000).toISOString().slice(0,10);
+  $('likes-day').value=yesterday;$('likes-day').max=yesterday;let reviewedDay=null;
+  function invalidateLikes(){reviewedDay=null;$('likes-confirm').hidden=true;$('likes-result').textContent='';}
+  $('likes-day').oninput=invalidateLikes;$('likes-input').oninput=invalidateLikes;
+  function renderAwards(rows){$('likes-result').innerHTML=rows.length?'<ol>'+rows.map(r=>'<li>'+esc((teams.find(t=>t.id===r.team_id)||{}).name||r.team_id)+' · @'+esc(r.handle)+' · '+r.like_count+' curtidas · <b>+'+r.points+' cadeiras</b></li>').join('')+'</ol>':'<p>Sem comentários elegíveis com curtidas e horário conferidos.</p>';}
+  $('likes-record').onclick=async()=>{invalidateLikes();try{const day=$('likes-day').value;if(!day||day>=G.todayBR())throw Error('Escolha um dia encerrado.');const rows=$('likes-input').value.trim().split(/\r?\n/).filter(Boolean).map(line=>{const m=line.trim().match(/^@?([\w.]{1,30})\s+(\d+)\s+([01]\d|2[0-3]):([0-5]\d)(?::([0-5]\d))?$/);if(!m)throw Error('Formato inválido: use @usuario curtidas HH:MM:SS.');const likes=Number(m[2]);if(!Number.isSafeInteger(likes)||likes>2147483647)throw Error('Contagem inválida.');return {handle:m[1].toLowerCase(),likes,commented_at:day+'T'+m[3]+':'+m[4]+':'+(m[5]||'00')+'-03:00'};});const {error}=await sb.rpc('record_comment_likes',{p_day:day,p_entries:rows});if(error)throw error;say('likes-msg','Contagens salvas. Confira o pódio antes de encerrar.','ok');}catch(e){say('likes-msg',esc(e.message),'err');}};
+  $('likes-preview').onclick=async()=>{invalidateLikes();try{const day=$('likes-day').value;if(!day||day>=G.todayBR())throw Error('Escolha um dia encerrado.');const closed=await sb.from('like_awards').select('*').eq('day',day).order('position');if(closed.error)throw closed.error;const check=await sb.from('like_days').select('day').eq('day',day);if(check.error)throw check.error;if(check.data.length){renderAwards(closed.data);return say('likes-msg','Dia já encerrado. Estes são os prêmios definitivos.','ok');}const data=[];for(let from=0;;from+=1000){const page=await sb.from('comments').select('handle,like_count,commented_at,likes_checked_at').eq('comment_day',day).gt('like_count',0).not('likes_checked_at','is',null).not('commented_at','is',null).order('like_count',{ascending:false}).order('commented_at').order('handle').range(from,from+999);if(page.error)throw page.error;data.push(...page.data);if(page.data.length<1000)break;}const used=new Set(),rows=[];for(const c of data){const team=fans[c.handle];if(!team||used.has(team))continue;used.add(team);rows.push({...c,team_id:team,points:[5,3,1][rows.length]});if(rows.length===3)break;}renderAwards(rows);reviewedDay=day;$('likes-confirm').hidden=!rows.length;say('likes-msg','Prévia: um prêmio por time; empate por horário e depois @.','ok');}catch(e){say('likes-msg',esc(e.message),'err');}};
+  $('likes-close').onclick=async()=>{const day=$('likes-day').value;if(reviewedDay!==day)return;reviewedDay=null;$('likes-confirm').hidden=true;try{const {data,error}=await sb.rpc('close_like_day',{p_day:day});if(error)throw error;renderAwards(data);say('likes-msg','Dia encerrado. Prêmios somados aos times uma única vez. Atualize o mapa.','ok');}catch(e){say('likes-msg',esc(e.message),'err');}};
+
+  $("fix-move").onclick=async()=>{const h=fixH(); if(!fans[h]){say("fix-msg","Esse @ não está no jogo.","err");return}
+    const {error}=await sb.from("fans").update({team_id:$("fix-t").value}).eq("handle",h);
+    if(error)return say("fix-msg","Não mudou: "+esc(error.message),"err"); fans[h]=$("fix-t").value; say("fix-msg",`@${esc(h)} agora é do ${esc($("fix-t").selectedOptions[0].text)}.`,"ok")};
+  $("fix-del").onclick=()=>{const h=fixH(); if(!fans[h]){say("fix-msg","Esse @ não está no jogo.","err");return}
+    $("fix-confirm-txt").textContent=`Remover @${h} e todas as cadeiras dele? Não dá pra desfazer.`;$("fix-confirm").hidden=false};
+  $("fix-no").onclick=()=>$("fix-confirm").hidden=true;
+  $("fix-yes").onclick=async()=>{const h=fixH();$("fix-confirm").hidden=true;
+    await sb.from("fans").update({referred_by:null}).eq("referred_by",h);
+    const {error}=await sb.from("fans").delete().eq("handle",h);
+    if(error)return say("fix-msg","Não removeu: "+esc(error.message),"err"); delete fans[h]; say("fix-msg",`@${esc(h)} removido.`,"ok")};
+
+  /* ---------- configurações ---------- */
+  $("inat-save").onclick=async()=>{const {error}=await sb.from("settings").upsert({key:"inatividade_dias",value:Number($("inat").value)});
+    say("inat-msg",error?"Não salvou: "+esc(error.message):"Salvo.",error?"err":"ok")};
+
+  $('levels-save').onclick=async()=>{const value=[0,1,2,3,4].map(i=>Number($('lv-'+i).value));if(value.some((v,i)=>!Number.isInteger(v)||v<0||(i&&v<=value[i-1])))return say('levels-msg','Use metas inteiras em ordem crescente, começando em 0.','err');const {error}=await sb.from('settings').upsert({key:'niveis_estadio',value});say('levels-msg',error?'Não salvou: '+esc(error.message):'Metas salvas. Atualize o mapa para ver a nova progressão.',error?'err':'ok');};
+  /* ---------- times ---------- */
+  function renderTeams(){
+    $("teams-body").innerHTML=teams.map(t=>`<tr><td><span class="team">${t.crest_url?`<img src="${esc(t.crest_url)}" alt="" width="20" height="20" style="object-fit:contain">`:`<span class="sw" style="background:${esc(t.color1)}"></span>`}${esc(t.name)}</span></td>
+      <td><input class="field" id="cr-${esc(t.id)}" value="${esc(t.crest_url||"")}" placeholder="https://…/escudo.png" aria-label="Escudo do ${esc(t.name)}"></td>
+      <td><input class="field" id="al-${esc(t.id)}" value="${esc((t.aliases||[]).join(", "))}" aria-label="Apelidos do ${esc(t.name)}"></td>
+      <td><button class="btn ghost" type="button" data-save="${esc(t.id)}">Salvar</button></td></tr>`).join("");
+  }
+  $("teams-body").addEventListener("click",async e=>{const b=e.target.closest("[data-save]"); if(!b)return; const id=b.dataset.save;
+    const crest=$("cr-"+id).value.trim()||null, aliases=$("al-"+id).value.split(",").map(s=>s.trim()).filter(Boolean);
+    const {error}=await sb.from("teams").update({crest_url:crest,aliases}).eq("id",id);
+    if(error)return say("team-msg","Não salvou: "+esc(error.message),"err");
+    const t=teams.find(x=>x.id===id); t.crest_url=crest; t.aliases=aliases; renderTeams(); say("team-msg",`${esc(t.name)} atualizado.`,"ok")});
+  $("new-team").addEventListener("submit",async e=>{e.preventDefault();
+    const row={id:$("nt-id").value.trim().toLowerCase().replace(/\s+/g,"-"),name:$("nt-name").value.trim(),short:$("nt-short").value.trim().toUpperCase(),city:$("nt-city").value.trim(),uf:$("nt-uf").value.trim().toUpperCase(),country:$("nt-country").value.trim().toUpperCase(),lat:parseFloat($("nt-lat").value.replace(",",".")),lon:parseFloat($("nt-lon").value.replace(",",".")),color1:$("nt-c1").value,color2:$("nt-c2").value,aliases:[]};
+    if(isNaN(row.lat)||isNaN(row.lon))return say("team-msg","Latitude e longitude precisam ser números, como -30.05 e -51.17.","err");
+    const {error}=await sb.from("teams").insert(row); if(error)return say("team-msg","Não adicionou: "+esc(error.message),"err");
+    teams.push(row); teams.sort((a,b)=>a.name.localeCompare(b.name)); renderTeams(); e.target.reset(); say("team-msg",`${esc(row.name)} adicionado.`,"ok")});
+
+  enter();
+})();
+</script>
+</body>
+</html>

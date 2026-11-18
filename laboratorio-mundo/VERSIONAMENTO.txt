@@ -1,0 +1,8 @@
+VERSÕES DO LABORATÓRIO MUNDO
+
+Cada build com HTML diferente guarda uma nova versão numerada, com nome e data, sem sobrescrever as anteriores.
+Antes de uma nova rodada, atualizar version-label.json com o nome da revisão e a data.
+Executar scripts/build-world-lab.py: ele arquiva automaticamente o HTML e os fontes em .sites-runtime/mundo-versionado/.
+Comparar em /laboratorio-mundo/versoes/ ou /laboratorio-mundo/?v=3 (v4, v5...).
+Versões congelam o visual; a leitura pública de dados continua sendo a do jogo.
+Publicação online continua dependendo da aprovação do usuário.

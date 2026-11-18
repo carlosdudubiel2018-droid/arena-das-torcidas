@@ -1,0 +1,16 @@
+[
+  {
+    "kind": "terrain-low",
+    "originalBytes": 164756,
+    "newBytes": 181048,
+    "colorsBitExact": true,
+    "noAddedHalo": true
+  },
+  {
+    "kind": "terrain-focus",
+    "originalBytes": 82690,
+    "newBytes": 84154,
+    "colorsBitExact": true,
+    "noAddedHalo": true
+  }
+]

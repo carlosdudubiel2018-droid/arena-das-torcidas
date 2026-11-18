@@ -1,0 +1,11 @@
+PREPARAÇÃO PARA O OFICIAL — NÃO EXECUTAR NESTA RODADA
+
+1. Remover do HTML/JS os botões +500 moedas, +XP, testes locais e começar na fase 5/6.
+2. No servidor oficial, rejeitar test_coins, test_xp, lab_phase e fixtures. Esconder só os botões não basta. Remover também os ramos de teste do SQL e do pacote Edge. Validar com testes que essas chamadas são recusadas.
+3. Moedas e XP oficiais começam em 0; inventário e acessórios equipados começam vazios. Criar tabelas oficiais de economia vazias e novos controles de sessão/versão. NUNCA copiar wallets, wallet_ledger, inventory, equipped, free_records, partidas, bônus, prêmios ou fixtures do laboratório. Não executar o reset agora.
+4. Preservar identidade/@, carteirinhas e números de sócio, cadeiras, cargos, eleição e comentários do jogo de futebol. Preservar também partidas, ranking, prêmios e energia reais dos pênaltis que já existem no oficial. A limpeza dos testes não é um reset dos pênaltis oficiais.
+5. O recorde de faltas e os bônus da primeira liberação começam vazios na economia oficial; os dados da Rodada 4 atual permanecem só no schema arena_round4_v146.
+6. Antes de qualquer publicação oficial: backup completo + teste em iPhone/Instagram e Android reais + aprovação explícita do dono. Os prêmios de falta continuam simulados até essa aprovação.
+7. Validar a curva de dificuldade com partidas humanas; a meta de ~10% chegando ao fim da fase 6 não é uma taxa já medida em jogadores reais.
+
+Nesta entrega: somente /laboratorio-rodada4/ e seu endpoint/tabelas privados.

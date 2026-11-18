@@ -1,0 +1,1 @@
+window.PLAY_RULES=Object.freeze({goalsPerMatch:5,pointsPerGoal:10,refillMinutes:30,maxEnergy:6,timeZone:'America/Sao_Paulo',prizes:[5,4,3,2,1],gamePrizes:{penalty:[5,4,3,2,1],freekick:[7,5,3,2,1]},maxPrizePositions:5,rewardsEnabled:false,awardBucket:'games_chairs',countsForPresident:false});

@@ -1,0 +1,42 @@
+@media (min-width: 900px) {
+  body { --arena-header-height: 64px; }
+  body:not(.in-game), body[data-view="socio"]:not(.in-game) { padding-top: var(--arena-header-height); }
+  body:not(.in-game) .socio-header {
+    position: fixed; inset: 0 0 auto; z-index: 40; height: var(--arena-header-height);
+    display: grid; grid-template-columns: minmax(114px,1fr) auto minmax(242px,1fr);
+    align-items: center; gap: 10px; max-width: none; min-height: 0; margin: 0;
+    padding: 0 clamp(12px,2vw,36px); box-sizing: border-box;
+    background: #0b1830; border-bottom: 1px solid #f2d77940;
+  }
+  .socio-header .brand { justify-self: start; }
+  .socio-header .desktop-nav { grid-column: 2; display: flex; gap: clamp(2px,.5vw,10px); }
+  .desktop-nav button, .desktop-nav .desktop-copa {
+    display: flex; align-items: center; justify-content: center; gap: 5px;
+    min-height: 42px; padding: 0 clamp(5px,.75vw,13px); border-radius: 9px;
+    color: #e0e9f6; font-size: clamp(12px,1vw,15px); font-weight: 800;
+    text-decoration: none; white-space: nowrap;
+  }
+  .desktop-nav button:hover, .desktop-nav .desktop-copa:hover { background: #ffffff16; }
+  .desktop-nav button[aria-current="page"] { background: #ffd438; color: #0d1a32; }
+  .desktop-nav button::before { content: attr(data-icon) / ""; }
+  body .bottom-nav { display: none !important; }
+  body:not(.in-game) :is(#world-panel,#reading-panel,#member-panel) { top: var(--arena-header-height); bottom: 0; }
+  body:not(.in-game) .economy-bar, body[data-view="socio"]:not(.in-game) .economy-bar {
+    display: flex !important; top: 0; right: clamp(12px,2vw,36px) !important; left: auto !important; bottom: auto; transform: none; z-index: 41;
+    width: min(242px,28vw); height: var(--arena-header-height); padding: 0;
+    justify-content: flex-end; gap: 8px; background: transparent; border: 0;
+  }
+  .economy-bar .coin-balance { position: relative; min-width: 0; gap: 3px 6px; }
+  .economy-bar .coin-balance:has(.desktop-player) { display: block; padding: 0; }
+  .economy-bar .coin-balance:has(.desktop-player) > :not(.desktop-player) { display: none; }
+  .desktop-player { display: grid; grid-template-columns: 35px minmax(0,1fr); column-gap: 6px; align-items: center; max-width: 125px; }
+  .desktop-player img { grid-row: span 2; width: 35px; height: 35px; object-fit: cover; border-radius: 50%; background: #233955; }
+  .desktop-player strong, .desktop-player small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .desktop-player strong { color: #fff; font-size: 13px; }
+  .desktop-player small { color: #cbd7e8; font-size: 11px; padding: 0; background: none; }
+  .economy-bar #earn-coins { white-space: nowrap; }
+}
+@media (max-width: 899px) {
+  .desktop-nav .desktop-copa, .desktop-player { display: none !important; }
+}
+

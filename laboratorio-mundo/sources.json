@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Natural Earth \u00b7 pa\u00edses 1:110m",
+    "file": "/assets/world-110m.json",
+    "license": "Public domain",
+    "url": "https://www.naturalearthdata.com/about/terms-of-use/"
+  },
+  {
+    "title": "Divisas brasileiras j\u00e1 usadas pelo projeto",
+    "file": "/assets/states-br.json"
+  }
+]
